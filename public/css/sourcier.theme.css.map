@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "sourcier.theme.css",
-	"sources": [
-		"../../sass/sourcier.theme.scss"
-	],
-	"mappings": "AAAA,cAAc,AAAC,CACX,MAAM,CAAE,KAAM,CACjB",
-	"names": []
-}
