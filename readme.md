@@ -4,7 +4,7 @@ __Author__:  Roger Rajaratnam <roger@ragusource.com>
 __Website__: http://www.sourcier.uk
 __Version__: 0.1.1
 
-## Usuage
+## Usage
 
 ```bash
 $ git clone git@github.com:sourcier/sourcier-web.git
