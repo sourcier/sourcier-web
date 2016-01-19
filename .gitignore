@@ -32,3 +32,5 @@ npm-debug.log
 /.idea/*
 
 /public/assets/*
+/public/assets/sourcier/css/*
+!/public/assets/sourcier
