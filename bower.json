@@ -1,0 +1,12 @@
+{
+    "name": "sourcier-web",
+    "authors": [
+        "Roger Rajaratnam <roger@sourcier.uk>"
+    ],
+    "homepage": "https://github.com/sourcier/sourcier-web",
+    "private": true,
+    "dependencies": {
+        "jquery": "~2.2.0",
+        "uikit": "~2.24.3"
+    }
+}
