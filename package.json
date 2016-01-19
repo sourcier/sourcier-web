@@ -18,5 +18,5 @@
         "serve-favicon": "~2.3",
         "swig": "~1.4",
         "gulp-develop-server": "~0.5"
-    },
+    }
 }
