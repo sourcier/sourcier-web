@@ -38,7 +38,7 @@ $ cd sourcier-web
 $ gulp
 ```
 
-View templates are written using [Swig](http://paularmstrong.github.io/swig/docs)
+View templates are written using [Swig](http://paularmstrong.github.io/swig/docs).
 
 ## That was it.
 
