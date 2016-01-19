@@ -2,7 +2,7 @@
 
 __Author__:  Roger Rajaratnam <roger@ragusource.com>  
 __Website__: http://www.sourcier.uk  
-__Version__: 0.1.2
+__Version__: 0.1.3
 
 ## Dependencies
 
@@ -31,11 +31,13 @@ In your browser go to: http://localhost:3000
 
 ## Development
 
-You can recompile the assets by running the gulp watch command:
+You can run the development server by running gulp:
 
 ```bash
 $ cd sourcier-web
 $ gulp
 ```
+
+Gulp will monitor for code changes, recompile the sass files and reload the server if required.
 
 View templates are written using [Swig](http://paularmstrong.github.io/swig/docs).
