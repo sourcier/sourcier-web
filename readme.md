@@ -2,7 +2,7 @@
 
 __Author__:  Roger Rajaratnam <roger@ragusource.com>  
 __Website__: http://www.sourcier.uk  
-__Version__: 0.1.2
+__Version__: 0.1.3
 
 ## Dependencies
 
