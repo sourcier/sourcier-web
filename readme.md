@@ -1,10 +1,12 @@
-# ☄ {#top} WWW.SOURCIER.UK
+# WWW.SOURCIER.UK
 
-__Author__:  Roger Rajaratnam <roger@ragusource.com>
-__Website__: http://www.sourcier.uk
-__Version__: 0.1.1
+__Author__:  Roger Rajaratnam <roger@ragusource.com>  
+__Website__: http://www.sourcier.uk  
+__Version__: 0.1.2
 
 ## Dependencies
+
+Install brew, node, gulp and bower:
 
 ```bash
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -13,6 +15,8 @@ $ npm install -g gulp bower
 ```
 
 ## Usage
+
+Clone the repo, install dependencies, compile assets and run the web app:
 
 ```bash
 $ git clone git@github.com:sourcier/sourcier-web.git
@@ -27,13 +31,11 @@ In your browser go to: http://localhost:3000
 
 ## Development
 
-You can recomple the site CSS by running the gulp watch command:
+You can recompile the assets by running the gulp watch command:
 
 ```bash
 $ cd sourcier-web
 $ gulp
 ```
 
-## That was it.
-
-Return to the [Top](#top "Top").
+View templates are written using [Swig](http://paularmstrong.github.io/swig/docs).
