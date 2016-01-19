@@ -4,12 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>www.sourcier.uk</title>
+        <link rel="stylesheet" href="/assets/animate.css/animate.min.css"/>
         <link rel="stylesheet" href="/assets/uikit/css/uikit.min.css"/>
-        <link rel="stylesheet" href="/assets/sourcier/css/theme.css"/>
+        <link rel="stylesheet" href="/assets/sourcier/css/theme.min.css"/>
     </head>
     <body>
-        {{{body}}}
+        {% block content %}{% endblock %}
         <script src="/assets/jquery/dist/jquery.min.js"></script>
         <script src="/assets/uikit/js/uikit.min.js"></script>
+        <script src="/assets//wow/dist/wow.min.js"></script>
+        <script>new WOW().init();</script>
     </body>
 </html>
