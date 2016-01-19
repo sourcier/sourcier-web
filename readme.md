@@ -6,6 +6,8 @@ __Version__: 0.1.1
 
 ## Dependencies
 
+Install brew, node, gulp and bower:
+
 ```bash
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install node
@@ -13,6 +15,8 @@ $ npm install -g gulp bower
 ```
 
 ## Usage
+
+Clone the repo, install dependencies, compile assets and run the web app:
 
 ```bash
 $ git clone git@github.com:sourcier/sourcier-web.git
@@ -27,7 +31,7 @@ In your browser go to: http://localhost:3000
 
 ## Development
 
-You can recomple the site CSS by running the gulp watch command:
+You can recompile the assets by running the gulp watch command:
 
 ```bash
 $ cd sourcier-web
