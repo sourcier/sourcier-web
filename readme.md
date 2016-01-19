@@ -1,7 +1,7 @@
-# ☄ {#top} WWW.SOURCIER.UK
+# WWW.SOURCIER.UK
 
-__Author__:  Roger Rajaratnam <roger@ragusource.com>
-__Website__: http://www.sourcier.uk
+__Author__:  Roger Rajaratnam <roger@ragusource.com>  
+__Website__: http://www.sourcier.uk  
 __Version__: 0.1.1
 
 ## Dependencies
@@ -39,7 +39,3 @@ $ gulp
 ```
 
 View templates are written using [Swig](http://paularmstrong.github.io/swig/docs).
-
-## That was it.
-
-Return to the [Top](#top "Top").
