@@ -31,11 +31,13 @@ In your browser go to: http://localhost:3000
 
 ## Development
 
-You can recompile the assets by running the gulp watch command:
+You can run the development server by running gulp:
 
 ```bash
 $ cd sourcier-web
 $ gulp
 ```
+
+Gulp will monitor for code changes, recompile the sass files and reload the server if required.
 
 View templates are written using [Swig](http://paularmstrong.github.io/swig/docs).
