@@ -1,7 +1,6 @@
 'user strict';
 
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var rename = require("gulp-rename");
 var sourcemaps = require('gulp-sourcemaps');
 var server = require('gulp-develop-server');
