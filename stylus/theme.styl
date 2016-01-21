@@ -1,0 +1,52 @@
+@require 'vars.styl'
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oxygen', sans-serif;
+    color: headingTextColor;
+}
+
+.hero {
+    text-align: center;
+    max-height: 800px;
+    padding-top: 100px;
+    overflow: hidden;
+    background: url(/assets/sourcier/images/trianglify-background.svg) no-repeat;
+    .hero__image {
+        margin-top: 50px;
+    }
+    h2,
+    p {
+        color: heroTextColor;
+    }
+    p {
+        font-weight: 700;
+    }
+    @media screen and (min-width: mediumScreen) {
+        h2 {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 84px;
+            line-height 32px;
+        }
+    }
+    @media screen and (max-width: smallScreen) {
+        h2 {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 42px;
+            line-height 16px;
+            margin: 0;
+        }
+    }
+}
