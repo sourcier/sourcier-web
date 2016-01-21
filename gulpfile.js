@@ -5,16 +5,17 @@ var sass = require('gulp-sass');
 var rename = require("gulp-rename");
 var sourcemaps = require('gulp-sourcemaps');
 var server = require('gulp-develop-server');
+var stylus = require('gulp-stylus');
 
 var paths = {
-    sass: ['sass/**/*.scss'],
+    stylus: ['stylus/**/*.styl'],
     routes: ['routes/*.js']
 };
 
-gulp.task('sass', function () {
-    return gulp.src(paths.sass)
+gulp.task('stylus', function () {
+    return gulp.src(paths.stylus)
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(stylus({compress: true}))
         .pipe(sourcemaps.write())
         .pipe(rename(function (path) {
             path.basename = path.basename + '.min';
@@ -23,7 +24,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.sass, ['sass']);
+    gulp.watch(paths.stylus, ['stylus']);
 });
 
 gulp.task('default', ['watch', 'server:start'], function () {

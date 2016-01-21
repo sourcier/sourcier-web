@@ -1,6 +1,6 @@
 {
     "name": "sourcier-web",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "private": true,
     "scripts": {
         "start": "node ./bin/www"
@@ -11,12 +11,12 @@
         "debug": "~2.2",
         "express": "~4.13",
         "gulp": "~3.9",
+        "gulp-develop-server": "~0.5",
         "gulp-rename": "~1.2",
-        "gulp-sass": "~2.1",
+        "gulp-stylus": "~2.2",
         "gulp-sourcemaps": "~1.6",
         "morgan": "~1.6",
         "serve-favicon": "~2.3",
-        "swig": "~1.4",
-        "gulp-develop-server": "~0.5"
+        "swig": "~1.4"
     }
 }

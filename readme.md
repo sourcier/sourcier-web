@@ -2,7 +2,7 @@
 
 __Author__:  Roger Rajaratnam <roger@ragusource.com>  
 __Website__: http://www.sourcier.uk  
-__Version__: 0.1.4
+__Version__: 0.1.5
 
 ## Dependencies
 
@@ -23,7 +23,7 @@ $ git clone git@github.com:sourcier/sourcier-web.git
 $ cd sourcier-web
 $ npm install
 $ bower install
-$ gulp sass
+$ gulp stylus
 $ DEBUG=sourcier-web:* npm start
 ```
 
@@ -38,6 +38,9 @@ $ cd sourcier-web
 $ gulp
 ```
 
+In your browser go to: http://localhost:3000
+
 Gulp will monitor for code changes, recompile the sass files and reload the server if required.
 
-View templates are written using [Swig](http://paularmstrong.github.io/swig/docs).
+View templates are written using [Swig](http://paularmstrong.github.io/swig).
+CSS is written using [Stylus](http://stylus-lang.com).
