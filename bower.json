@@ -9,6 +9,9 @@
     "jquery": "~2.2",
     "uikit": "~2.24",
     "animate.css": "~3.5",
-    "wow": "~1.1"
+    "wow": "~1.1",
+    "webfontloader": "~1.6",
+    "bootstrap": "~3.3",
+    "font-awesome": "~4.5"
   }
 }
