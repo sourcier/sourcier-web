@@ -1,4 +1,4 @@
-.hero
+#hero
     text-align: center
 
     max-height: 800px
@@ -6,13 +6,7 @@
     padding-top: 100px
 
     overflow: hidden
-
-    background: url(/assets/sourcier/images/trianglify-background.svg) no-repeat
-
-    h2,
-    p
-        color: heroTextColor
-        line-height normal
+    
     h2
         font-size: 31pt
         strong
@@ -21,7 +15,8 @@
         font-size: 58pt
         margin-top: -35px
 
-    @media (max-width: mediumScreen - 1)
+    // Mobile
+    @media screen and (max-width: mediumScreen - 1)
         h2
             font-size: 13pt;
             strong
