@@ -1,8 +1,10 @@
 {% extends 'layout.html' %}
 
+{% block bodyClass %}error{% endblock %}
+
 {% block content %}
-<div class="uk-container uk-container-center uk-margin-large-top">
-    <div class="uk-width-1-1">
+<div id="about" class="container-fluid">
+    <div class="col-md-12">
         <h1>{{ message }}</h1>
         <h2>{{ error['status'] }}</h2>
         <pre>{{ error['stack'] }}</pre>
