@@ -9,7 +9,12 @@ var swig = require('swig');
 var app = express();
 
 // view engine setup
-swig.setDefaults({cache: false});
+swig.setDefaults({
+    cache: false,
+    locals: {
+        now: function() { return new Date();}
+    }
+});
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname,'views'));
