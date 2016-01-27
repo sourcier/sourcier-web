@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="/assets/sourcier/css/theme.min.css"/>
     </head>
-    <body>
+    <body class="{% block bodyClass %}{% endblock %}">
         {% block content %}{% endblock %}
         <script src="/assets/jquery/dist/jquery.min.js"></script>
         <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
