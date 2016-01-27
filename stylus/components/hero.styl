@@ -6,12 +6,12 @@
     overflow: hidden
     
     h2
-        font-size 31pt
+        font-size: 13pt;
         strong
-            font-size 56pt
+            font-size 28pt
     p
-        font-size 58pt
-        margin-top -35px
+        font-size: 32px;
+        margin-top: -25px;
         
     .hero-text
         width 100%
@@ -22,14 +22,15 @@
         margin-top 20px
         width 100%
         max-width: 1200px
-
-    // Mobile
-    @media screen and (max-width: mediumScreen - 1)
+        
+    // Tablet & Desktop
+    @media screen and (min-width: mediumScreen)
+        
         h2
-            font-size: 13pt;
+            font-size 31pt
             strong
-                font-size 28pt
-
+                font-size 56pt
+        
         p
-            font-size: 32px;
-            margin-top: -25px;
+            font-size 58pt
+            margin-top -35px
