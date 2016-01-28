@@ -8,7 +8,7 @@ var stylus = require('gulp-stylus');
 
 var paths = {
     stylus: ['stylus/**/*.styl'],
-    routes: ['routes/*.js']
+    all: ['**/*']
 };
 
 gulp.task('stylus', function () {
@@ -27,7 +27,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['watch', 'server:start'], function () {
-    gulp.watch(paths.routes, ['server:restart']);
+    gulp.watch(paths.all, ['server:restart']);
 });
 
 gulp.task('server:start', function () {
