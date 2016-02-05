@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="sourcierWeb">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description"
+              content="A London based software development agency specialising in HTML5, CSS3, JavaScript, Node.js, PHP &amp; MySQL">
+        <title>www.sourcier.uk</title>
+        <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/assets/animate.css/animate.min.css"/>
+        <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="/assets/sourcier/css/theme.min.css"/>
+    </head>
+    <body>
+        <div ng-include="assets/sourcier/js/app/partials/navbar.html"></div>
+        
+        <div ng-view></div>
+
+        <script src="/assets/webfontloader/webfontloader.js"></script>
+        <script src="/assets/jquery/dist/jquery.min.js"></script>
+        <script src="/assets/angular/angular.min.js"></script>
+        <script src="/assets/angular-route/angular-route.min.js"></script>
+        <script src="/assets/sourcier/js/app/app.js"></script>
+        <script src="/assets/sourcier/js/app/homepage/homepage.js"></script>
+        <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/assets/wow/dist/wow.min.js"></script>
+        <script>
+            WebFont.load({
+                google: {
+                    families: ['Ovo', 'Muli:300']
+                }
+            });
+            new WOW().init();
+        </script>
+    </body>
+</html>
