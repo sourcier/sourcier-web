@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" ng-app="sourcierWeb">
     <head>
+        <base href="/">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +14,14 @@
         <link rel="stylesheet" href="/assets/sourcier/css/theme.min.css"/>
     </head>
     <body>
-        <div ng-include="assets/sourcier/js/app/partials/navbar.html"></div>
+        <ng-include src="'assets/sourcier/js/app/partials/navbar.html'"></ng-include>
         
         <div ng-view></div>
+        
+        <ng-include src="'assets/sourcier/js/app/partials/clients.html'"></ng-include>
+
+        <!-- @todo Make this only visible on the home page -->
+        <ng-include src="'assets/sourcier/js/app/partials/footer.html'"></ng-include>
 
         <script src="/assets/webfontloader/webfontloader.js"></script>
         <script src="/assets/jquery/dist/jquery.min.js"></script>
@@ -23,6 +29,9 @@
         <script src="/assets/angular-route/angular-route.min.js"></script>
         <script src="/assets/sourcier/js/app/app.js"></script>
         <script src="/assets/sourcier/js/app/homepage/homepage.js"></script>
+        <script src="/assets/sourcier/js/app/about-us/about-us.js"></script>
+        <script src="/assets/sourcier/js/app/services/services.js"></script>
+        <script src="/assets/sourcier/js/app/testimonials/testimonials.js"></script>
         <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/assets/wow/dist/wow.min.js"></script>
         <script>

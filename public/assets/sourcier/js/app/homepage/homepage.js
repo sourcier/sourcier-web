@@ -8,7 +8,6 @@ angular.module('sourcierWeb.homepage', ['ngRoute'])
     controller: 'IndexController'
   });
 }])
-
+    
 .controller('IndexController', [function() {
-
 }]);

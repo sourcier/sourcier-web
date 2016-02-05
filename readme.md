@@ -42,5 +42,4 @@ In your browser go to: http://localhost:3000
 
 Gulp will monitor for code changes, recompile the sass files and reload the server if required.
 
-View templates are written using [Nunjucks](http://mozilla.github.io/nunjucks).
 CSS is written using [Stylus](http://stylus-lang.com).
