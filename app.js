@@ -4,18 +4,24 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var swig = require('swig');
+var nunjucks = require('nunjucks');
 
 var app = express();
 
-// view engine setup
-swig.setDefaults({
-    cache: false,
-    locals: {
-        now: function() { return new Date();}
-    }
+// Configure view handling
+var nunjucksEnv = nunjucks.configure('views', {
+    autoescape: true,
+    express: app
+    
 });
-app.engine('html', swig.renderFile);
+
+nunjucksEnv.addFilter('date', function(dateString, dateFormat) {
+    var moment = require('moment'),
+        date = 'now' == dateString ? new Date() : new Date(dateString);
+    
+    return moment(date).format(dateFormat);
+});
+
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname,'views'));
 
