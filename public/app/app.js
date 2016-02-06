@@ -8,7 +8,6 @@ angular.module('sourcierWeb', [
     'sourcierWeb.services',
     'sourcierWeb.testimonials',
 ]).config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    $routeProvider.otherwise({redirectTo: '/'});
     $locationProvider.html5Mode(true);
 }]).run(function ($rootScope) {
     $rootScope.currentDate = new Date();

@@ -11,7 +11,7 @@ var app = express();
 // Configure view engine
 nunjucks.configure('views', {autoescape: true, express: app});
 app.set('view engine', 'html');
-app.set('views', path.join(__dirname,'views'));
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -22,7 +22,9 @@ app.use(cookieParser());
 // Define routes
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./routes'));
-app.use('/*', function(request, response){response.sendfile(__dirname + '/public/index.html');});
+app.use(['/about-us', '/services', '/testimonials'], function (request, response) {
+    response.sendfile(__dirname + '/public/index.html');
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
