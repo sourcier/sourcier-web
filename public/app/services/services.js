@@ -4,7 +4,7 @@ angular.module('sourcierWeb.services', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/services', {
-    templateUrl: 'assets/sourcier/js/app/services/services.html',
+    templateUrl: 'app/services/services.html',
     controller: 'ServicesController'
   });
 }])

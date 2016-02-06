@@ -42,4 +42,6 @@ In your browser go to: http://localhost:3000
 
 Gulp will monitor for code changes, recompile the sass files and reload the server if required.
 
-CSS is written using [Stylus](http://stylus-lang.com).
+Backend view templates are written using [Nunjucks](http://mozilla.github.io/nunjucks).  
+Frontend application is written using [AngularJs](https://angularjs.org).  
+CSS is written using [Stylus](http://stylus-lang.com).  
