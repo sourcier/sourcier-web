@@ -8,7 +8,7 @@ var stylus = require('gulp-stylus');
 
 var paths = {
     stylus: ['stylus/**/*.styl'],
-    all: ['**/*']
+    all: ['public/**/*','routes/**/*', 'stylus/**/*', 'views/**/*', 'app.js']
 };
 
 gulp.task('stylus', function () {

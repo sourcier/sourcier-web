@@ -2,7 +2,7 @@
 
 __Author__:  Roger Rajaratnam <roger@ragusource.com>  
 __Website__: http://www.sourcier.uk  
-__Version__: 0.1.13
+__Version__: 0.1.14
 
 ## Dependencies
 
@@ -42,5 +42,6 @@ In your browser go to: http://localhost:3000
 
 Gulp will monitor for code changes, recompile the sass files and reload the server if required.
 
-View templates are written using [Swig](http://paularmstrong.github.io/swig).
-CSS is written using [Stylus](http://stylus-lang.com).
+Backend view templates are written using [Nunjucks](http://mozilla.github.io/nunjucks).  
+Frontend application is written using [AngularJs](https://angularjs.org).  
+CSS is written using [Stylus](http://stylus-lang.com).  

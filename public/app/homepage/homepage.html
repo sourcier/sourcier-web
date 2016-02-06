@@ -1,11 +1,3 @@
-{% extends 'layout.html' %}
-
-{% block bodyClass %}homepage{% endblock %}
-
-{% block content %}
-
-{% include "partials/navbar.html" %}
-
 <div id="about" class="container-fluid">
     
     <div class="hero">
@@ -20,8 +12,4 @@
     
 </div>
 
-{% include "partials/clients.html" %}
-
-{% include "partials/footer.html" %}
-
-{% endblock %}
+<ng-include src="'app/partials/clients.html'"></ng-include>
