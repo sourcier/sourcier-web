@@ -8,20 +8,8 @@ var nunjucks = require('nunjucks');
 
 var app = express();
 
-// Configure view handling
-var nunjucksEnv = nunjucks.configure('views', {
-    autoescape: true,
-    express: app
-    
-});
-
-nunjucksEnv.addFilter('date', function(dateString, dateFormat) {
-    var moment = require('moment'),
-        date = 'now' == dateString ? new Date() : new Date(dateString);
-    
-    return moment(date).format(dateFormat);
-});
-
+// Configure view engine
+nunjucks.configure('views', {autoescape: true, express: app});
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname,'views'));
 
@@ -30,13 +18,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./routes'));
-app.use('/*', function(req, res){
-  res.sendfile(__dirname + '/public/index.html');
-});
+app.use('/*', function(request, response){response.sendfile(__dirname + '/public/index.html');});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
