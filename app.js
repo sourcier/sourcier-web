@@ -22,7 +22,7 @@ app.use(cookieParser());
 // Define routes
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./routes'));
-app.use(['/about-us', '/services', '/testimonials'], function (request, response) {
+app.use(/^\/(about-us|services|testimonials)\/?$/, function (request, response) {
     response.sendfile(__dirname + '/public/index.html');
 });
 
