@@ -15,10 +15,8 @@ gulp.task('stylus', function () {
     return gulp.src(paths.stylus)
         .pipe(sourcemaps.init())
         .pipe(stylus({compress: true}))
-        .pipe(sourcemaps.write())
-        .pipe(rename(function (path) {
-            path.basename = path.basename + '.min';
-        }))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./public/assets/sourcier/css'));
 });
 
