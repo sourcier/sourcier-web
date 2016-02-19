@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block bodyClass %}homepage{% endblock %}
+
+{% block content %}
+
+{% include "partials/navbar.html" %}
+
+<div id="about" class="container-fluid">
+    
+    <div class="hero">
+        <div class="hero-text">
+            <h2 class="wow fadeInUp" data-wow-duration="2s">WE'RE SOURCIER <strong>&amp;</strong> WE'RE HERE TO</h2>
+            <p class="wow fadeInDown" data-wow-duration="3s">BUILD YOUR IDEAS</p>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/sourcier/images/hero-img.jpg" class="wow bounceInUp" data-wow-duration="4s">
+        </div>
+    </div>
+    
+</div>
+
+{% include "partials/clients.html" %}
+
+{% include "partials/footer.html" %}
+
+{% endblock %}
