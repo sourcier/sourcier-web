@@ -1,2 +1,5 @@
 before_compile:
   - n 14.19.0
+
+before_build:
+  - yarn nx run web:build
