@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "infrastructure": "libs/infrastructure",
     "ui": "libs/ui",
     "ui-e2e": "apps/ui-e2e",
     "web": "apps/web",

@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@sourcier/infrastructure": ["libs/infrastructure/src/index.ts"],
       "@sourcier/ui": ["libs/ui/src/index.ts"]
     }
   },
