@@ -1,10 +1,16 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import Hero from './hero';
+import hero from './hero.mock';
 
-describe('Hero', () => {
+describe('Given a <Hero/> component', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Hero />);
-    expect(baseElement).toBeTruthy();
+    const { getByTestId } = render(<Hero {...hero} />);
+
+    expect(getByTestId('hero-heading')).toHaveTextContent(hero.heading);
+    expect(getByTestId('hero-sub-heading')).toHaveTextContent(hero.subHeading);
+    expect(getByTestId('hero-copy')).toHaveTextContent(hero.copy);
+    expect(getByTestId('hero-image')).toHaveAttribute('src', hero.image.src);
+    expect(getByTestId('hero-image')).toHaveAttribute('alt', hero.image.alt);
   });
 });

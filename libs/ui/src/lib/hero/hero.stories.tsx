@@ -1,5 +1,7 @@
 import { Story, Meta } from '@storybook/react';
-import { Hero, HeroProps } from './hero';
+
+import Hero, { HeroProps } from './hero';
+import hero from './hero.mock';
 
 export default {
   component: Hero,
@@ -9,4 +11,6 @@ export default {
 const Template: Story<HeroProps> = (args) => <Hero {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  ...hero,
+};
