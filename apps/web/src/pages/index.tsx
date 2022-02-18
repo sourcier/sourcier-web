@@ -8,7 +8,7 @@ export function Index() {
    *
    * Note: The corresponding styles are in the ./web.scss file.
    */
-  return <Hero />;
+  return <>Welcome!</>;
 }
 
 export default Index;
