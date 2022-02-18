@@ -1,7 +1,5 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import Icon from '../icon/icon';
-
-import logo from './logo.svg';
 
 export const Logo: FC = () => {
   return (

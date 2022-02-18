@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 export interface HeroProps {
   image: {
     src: string;
@@ -9,7 +9,7 @@ export interface HeroProps {
   copy: string;
 }
 
-const Hero: FC<HeroProps> = ({ image, heading, subHeading, copy }) => {
+export const Hero: FC<HeroProps> = ({ image, heading, subHeading, copy }) => {
   return (
     <main>
       <div>
