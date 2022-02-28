@@ -1,14 +1,16 @@
-import React, { FC } from 'react';
-import {
-  LinkIcon,
-  ExternalLinkIcon,
-  ChipIcon,
-  CodeIcon,
-} from '@heroicons/react/outline';
+import { FC } from 'react';
 import clsx from 'clsx';
+import {
+  FaTwitter,
+  FaGithub,
+  FaLink,
+  FaExternalLinkAlt,
+  FaMicrochip,
+  FaCode,
+} from 'react-icons/fa';
 
 export interface IconProps {
-  name: 'link' | 'external-link' | 'chip' | 'code';
+  name: 'link' | 'external-link' | 'chip' | 'code' | 'twitter' | 'github';
   size: 'sm' | 'md' | 'lg';
   background?: boolean;
 }
@@ -16,7 +18,7 @@ export interface IconProps {
 export const Icon: FC<IconProps> = ({
   name,
   size = 'md',
-  background = true,
+  background = false,
 }) => {
   const defaultProps = {
     className: clsx({
@@ -39,10 +41,14 @@ export const Icon: FC<IconProps> = ({
         },
       ])}
     >
-      {name === 'link' ? <LinkIcon {...defaultProps} /> : null}
-      {name === 'external-link' ? <ExternalLinkIcon {...defaultProps} /> : null}
-      {name === 'chip' ? <ChipIcon {...defaultProps} /> : null}
-      {name === 'code' ? <CodeIcon {...defaultProps} /> : null}
+      {name === 'link' ? <FaLink {...defaultProps} /> : null}
+      {name === 'external-link' ? (
+        <FaExternalLinkAlt {...defaultProps} />
+      ) : null}
+      {name === 'chip' ? <FaMicrochip {...defaultProps} /> : null}
+      {name === 'code' ? <FaCode {...defaultProps} /> : null}
+      {name === 'twitter' ? <FaTwitter {...defaultProps} /> : null}
+      {name === 'github' ? <FaGithub {...defaultProps} /> : null}
     </div>
   );
 };

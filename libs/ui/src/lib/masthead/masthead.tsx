@@ -1,6 +1,6 @@
 import React, { FC, Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import clsx from 'clsx';
 
 import Logo from '../logo/logo';
@@ -31,7 +31,7 @@ export const Masthead: FC<MastheadProps> = ({ navigation }) => {
             <div className="-my-2 -mr-2 md:hidden">
               <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                 <span className="sr-only">Open menu</span>
-                <MenuIcon className="w-6 h-6" aria-hidden="true" />
+                <FaBars className="w-6 h-6" aria-hidden="true" />
               </Popover.Button>
             </div>
             <nav className="hidden space-x-10 md:flex">
@@ -73,7 +73,7 @@ export const Masthead: FC<MastheadProps> = ({ navigation }) => {
                     <div className="-mr-2">
                       <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Close menu</span>
-                        <XIcon className="w-6 h-6" aria-hidden="true" />
+                        <FaTimes className="w-6 h-6" aria-hidden="true" />
                       </Popover.Button>
                     </div>
                   </div>
