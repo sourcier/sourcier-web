@@ -19,7 +19,6 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
-          restore-keys: ${{ runner.os }}-node_modules-
       - run: yarn --prefer-offline
         if: steps.cache-node_modules.outputs.cache-hit != 'true'
       - run: yarn nx affected:lint
@@ -46,7 +45,6 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
-          restore-keys: ${{ runner.os }}-node_modules-
       - run: yarn --prefer-offline
         if: steps.cache-node_modules.outputs.cache-hit != 'true'
       - run: yarn nx run web:build
@@ -72,7 +70,6 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
-          restore-keys: ${{ runner.os }}-node_modules-
       - run: yarn --prefer-offline
         if: steps.cache-node_modules.outputs.cache-hit != 'true'
       - run: yarn nx run web:build
