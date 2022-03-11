@@ -1,14 +1,14 @@
-import React from 'react';
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
-import { Hero } from '@sourcier/ui';
+export const IndexPage = () => {
+  const { title, description } = useSiteMetadata();
 
-export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./web.scss file.
-   */
-  return <>Welcome!</>;
-}
+  return (
+    <>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </>
+  );
+};
 
-export default Index;
+export default IndexPage;
