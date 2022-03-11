@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sourcier/infrastructure": ["libs/infrastructure/src/index.ts"],
-      "@sourcier/ui": ["libs/ui/src/index.ts"]
+      "@sourcier/sst": ["libs/sst/src/index.ts"],
+      "@sourcier/ui-components": ["libs/ui-components/src/index.ts"]
     },
     "types": ["jest", "node", "@testing-library/jest-dom"]
   },

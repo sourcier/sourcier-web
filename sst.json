@@ -3,5 +3,5 @@
   "region": "eu-west-2",
   "lint": true,
   "typeCheck": true,
-  "main": "libs/infrastructure/src/index.ts"
+  "main": "libs/sst/src/index.ts"
 }
