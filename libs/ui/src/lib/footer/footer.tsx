@@ -11,8 +11,11 @@ export const Footer: FC<FooterProps> = ({ navigation, licence, copy }) => {
     <footer className="bg-gray-800">
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="space-x-6 md:order-2">
-          {navigation.map(({ prefix, name, href, title }) => (
-            <p className="text-base text-right text-gray-400">
+          {navigation.map(({ prefix, name, href, title }, idx) => (
+            <p
+              className="text-base text-right text-gray-400"
+              key={`footer-link-${idx}`}
+            >
               {prefix}{' '}
               <a href={href} className="text-blue-500" title={title}>
                 {name}

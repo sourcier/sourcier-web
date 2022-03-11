@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `web`,
+    title: `Sourcier.uk`,
     description: `This is a gatsby application created by Nx.`,
   },
   plugins: [
@@ -51,8 +51,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/posts`,
-        name: 'posts',
+        path: `${__dirname}/blog`,
+        name: 'blog',
       },
     },
   ],
