@@ -1,17 +1,35 @@
-import { useSiteMetadata } from '../hooks/useSiteMetadata';
-import { Header } from './Header';
+import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
-interface LayoutProps {
-  children?: React.ReactNode;
-}
+import './layout.scss';
 
-export const Layout = ({ children }: LayoutProps) => {
-  const { title, description } = useSiteMetadata();
-
+const Layout = ({ pageTitle, children }) => {
   return (
-    <div className="grid max-w-3xl grid-cols-1 m-4 md:mx-auto md:grid-cols-3 md:gap-3">
-      <Header siteTitle={title} siteDescription={description} />
-      {children && children}
+    <div className="container">
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
+
+      <nav>
+        <ul className="nav-links">
+          <li className="nav-link-item">
+            <Link to="/" className="nav-link-text">
+              Home
+            </Link>
+          </li>
+          <li className="nav-link-item">
+            <Link to="/about" className="nav-link-text">
+              About
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <h1 className="heading">{pageTitle}</h1>
+        {children}
+      </main>
     </div>
   );
 };
+
+export default Layout;
