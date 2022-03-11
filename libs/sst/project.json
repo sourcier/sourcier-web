@@ -1,20 +1,20 @@
 {
-  "root": "libs/infrastructure",
-  "sourceRoot": "libs/infrastructure/src",
+  "root": "libs/sst",
+  "sourceRoot": "libs/sst/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/infrastructure/**/*.ts"]
+        "lintFilePatterns": ["libs/sst/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/infrastructure"],
+      "outputs": ["coverage/libs/sst"],
       "options": {
-        "jestConfig": "libs/infrastructure/jest.config.js",
+        "jestConfig": "libs/sst/jest.config.js",
         "passWithNoTests": true
       }
     }

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "infrastructure": "libs/infrastructure",
+    "sst": "libs/sst",
     "ui-components": "libs/ui-components",
     "ui-components-e2e": "apps/ui-components-e2e",
     "web": "apps/web",
