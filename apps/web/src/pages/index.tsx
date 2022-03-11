@@ -1,14 +1,7 @@
-import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { Layout } from '../components/Layout';
 
 export const IndexPage = () => {
-  const { title, description } = useSiteMetadata();
-
-  return (
-    <>
-      <h1>{title}</h1>
-      <p>{description}</p>
-    </>
-  );
+  return <Layout />;
 };
 
 export default IndexPage;
