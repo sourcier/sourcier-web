@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `web`,
+    title: `Sourcier.uk`,
     description: `This is a gatsby application created by Nx.`,
   },
   plugins: [

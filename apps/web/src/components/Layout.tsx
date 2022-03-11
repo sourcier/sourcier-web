@@ -1,15 +1,26 @@
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import './layout.scss';
 
 const Layout = ({ pageTitle, children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
+
   return (
     <div className="container">
       <Helmet>
-        <title>{pageTitle}</title>
+        <title>{pageTitle | data.site.siteMetadata.title}</title>
       </Helmet>
 
+      <header className="site-title">{data.site.siteMetadata.title}</header>
       <nav>
         <ul className="nav-links">
           <li className="nav-link-item">
