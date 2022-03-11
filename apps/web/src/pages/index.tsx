@@ -1,6 +1,4 @@
-import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
 
 export const IndexPage = () => {

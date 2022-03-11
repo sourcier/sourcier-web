@@ -8,7 +8,6 @@ const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
 useStaticQuery.mockImplementation(() => ({
   site: {
     siteMetadata: {
-      description: 'description',
       title: 'title',
     },
   },
@@ -20,8 +19,7 @@ beforeEach(() => {
 
 describe('Index', () => {
   it('should render successfully', () => {
-    const { getByText } = render(<Index />);
-    expect(getByText(/title/gi)).toBeTruthy();
-    expect(getByText(/description/gi)).toBeTruthy();
+    const { getByTestId } = render(<Index />);
+    expect(getByTestId('site-title').textContent).toEqual('title');
   });
 });
