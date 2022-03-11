@@ -14,13 +14,7 @@ jobs:
         with:
           node-version: 14.x
           cache: yarn
-      - id: cache-node_modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
       - run: yarn --prefer-offline
-        if: steps.cache-node_modules.outputs.cache-hit != 'true'
       - run: yarn nx affected:lint
       - run: yarn nx affected:test
   e2e:
@@ -34,13 +28,7 @@ jobs:
         with:
           node-version: 14.x
           cache: yarn
-      - id: cache-node_modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
       - run: yarn --prefer-offline
-        if: steps.cache-node_modules.outputs.cache-hit != 'true'
       - run: yarn nx affected:e2e
   deploy-develop:
     name: deploy[develop]
@@ -58,13 +46,7 @@ jobs:
         with:
           node-version: 14.x
           cache: yarn
-      - id: cache-node_modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
       - run: yarn --prefer-offline
-        if: steps.cache-node_modules.outputs.cache-hit != 'true'
       - run: yarn nx run web:build
       - run: yarn sst deploy --stage develop
   deploy-main:
@@ -83,12 +65,6 @@ jobs:
         with:
           node-version: 14.x
           cache: yarn
-      - id: cache-node_modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
       - run: yarn --prefer-offline
-        if: steps.cache-node_modules.outputs.cache-hit != 'true'
       - run: yarn nx run web:build
       - run: yarn sst deploy --stage main
