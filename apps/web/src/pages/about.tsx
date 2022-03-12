@@ -1,5 +1,3 @@
-import { Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
 
 const AboutPage = () => {

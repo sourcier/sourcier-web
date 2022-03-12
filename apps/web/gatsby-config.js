@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Sourcier.uk`,
-    description: `This is a gatsby application created by Nx.`,
+    brand: `Sourcier.uk`,
   },
   plugins: [
     'gatsby-plugin-sass',
