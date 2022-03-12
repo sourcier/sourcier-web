@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import * as Gatsby from 'gatsby';
 
 import Index from './index';
@@ -19,7 +19,7 @@ beforeEach(() => {
 
 describe('Index', () => {
   it('should render successfully', () => {
-    const { getByTestId } = render(<Index />);
-    expect(getByTestId('site-title').textContent).toEqual('title');
+    const tree = renderer.create(<Index />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

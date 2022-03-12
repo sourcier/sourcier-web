@@ -1,52 +1,35 @@
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-
-import './layout.scss';
+import { Header } from '@sourcier/ui-components';
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          title
+          brand
         }
       }
     }
   `);
 
   return (
-    <div className="container">
+    <>
       <Helmet>
-        <title>{pageTitle | data.site.siteMetadata.title}</title>
+        <title>{pageTitle | data.site.siteMetadata.brand}</title>
       </Helmet>
 
-      <header className="site-title" data-testid="site-title">
-        {data.site.siteMetadata.title}
-      </header>
-      <nav>
-        <ul className="nav-links">
-          <li className="nav-link-item">
-            <Link to="/" className="nav-link-text">
-              Home
-            </Link>
-          </li>
-          <li className="nav-link-item">
-            <Link to="/about" className="nav-link-text">
-              About
-            </Link>
-          </li>
-          <li className="nav-link-item">
-            <Link to="/blog" className="nav-link-text">
-              Blog
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <main>
-        <h1 className="heading">{pageTitle}</h1>
-        {children}
-      </main>
-    </div>
+      <Header
+        brand={data.site.siteMetadata.brand}
+        nav={[
+          { text: 'Home', href: '/' },
+          { text: 'About', href: '/about' },
+          { text: 'Blog', href: '/blog' },
+        ]}
+      />
+
+      <main>{children}</main>
+    </>
   );
 };
 
