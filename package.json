@@ -57,6 +57,7 @@
     "@storybook/manager-webpack5": "~6.4.12",
     "@storybook/react": "~6.4.12",
     "@svgr/webpack": "^5.4.0",
+    "@tailwindcss/typography": "^0.5.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "12.1.4",
     "@testing-library/react-hooks": "7.0.2",
@@ -94,4 +95,3 @@
     "url-loader": "^3.0.0"
   }
 }
-

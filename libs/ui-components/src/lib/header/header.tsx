@@ -16,7 +16,7 @@ export function Header({ brand, nav }: HeaderProps) {
 
   return (
     <nav className="shadow-sm bg-slate-900">
-      <div className="max-w-6xl px-4 mx-auto">
+      <div className="max-w-3xl px-4 mx-auto">
         <div className="flex justify-between">
           <div className="flex space-x-7">
             <div>
