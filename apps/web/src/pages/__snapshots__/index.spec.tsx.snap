@@ -21,6 +21,7 @@ Array [
             >
               <span
                 className="text-lg font-semibold text-white"
+                data-testid="site-brand"
               />
             </a>
           </div>

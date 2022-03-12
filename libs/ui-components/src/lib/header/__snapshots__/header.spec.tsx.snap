@@ -20,6 +20,7 @@ exports[`Header should render successfully 1`] = `
           >
             <span
               className="text-lg font-semibold text-white"
+              data-testid="site-brand"
             >
               Sourcier
             </span>
