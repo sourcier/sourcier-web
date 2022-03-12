@@ -32,7 +32,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         ]}
       />
 
-      <main className="max-w-3xl px-4 py-8 mx-auto prose">
+      <main className="max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-slate">
         {pageTitle && <h1>{pageTitle}</h1>}
         {children}
       </main>

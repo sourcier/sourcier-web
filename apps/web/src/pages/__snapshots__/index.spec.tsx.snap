@@ -98,7 +98,7 @@ Array [
     </div>
   </nav>,
   <main
-    className="max-w-3xl px-4 py-8 mx-auto prose"
+    className="max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-slate"
   >
     <article
       className="prose"
