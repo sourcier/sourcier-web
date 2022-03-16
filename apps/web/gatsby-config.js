@@ -1,4 +1,5 @@
 module.exports = {
+  jsxRuntime: 'automatic',
   siteMetadata: {
     brand: `Sourcier.uk`,
   },
