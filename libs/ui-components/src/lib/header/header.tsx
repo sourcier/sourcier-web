@@ -14,7 +14,7 @@ export function Header({ brand, nav }: HeaderProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <nav className="shadow-sm bg-primary">
+    <nav className="shadow-sm bg-grey-900 text-grey-900-contrast">
       <div className="max-w-3xl px-4 mx-auto">
         <div className="flex justify-between">
           <div className="flex space-x-7">
@@ -48,7 +48,7 @@ export function Header({ brand, nav }: HeaderProps) {
           {/* mobile menu button */}
           <div className="flex items-center md:hidden">
             <button
-              className="text-pink-300 outline-none"
+              className="outline-none text-amber"
               onClick={() => setIsVisible(!isVisible)}
             >
               {isVisible ? (
@@ -73,7 +73,7 @@ export function Header({ brand, nav }: HeaderProps) {
               <li key={`mobile-nav-item-${idx}`}>
                 <a
                   href={href}
-                  className="block px-2 py-4 text-sm text-white transition duration-300 active:bg-pink-300"
+                  className="block px-2 py-4 text-sm text-white transition duration-300 active:text-amber"
                 >
                   {text}
                 </a>

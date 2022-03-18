@@ -4,7 +4,7 @@ export interface FooterProps {
 
 export function Footer({ copyright }: FooterProps) {
   return (
-    <footer className="p-16 footer footer-center bg-base-300 text-base-content">
+    <footer className="p-16 text-center bg-grey-100 text-grey-100-contrast">
       <div>
         <p>{copyright}</p>
       </div>

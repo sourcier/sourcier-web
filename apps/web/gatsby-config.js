@@ -2,6 +2,7 @@ module.exports = {
   jsxRuntime: 'automatic',
   siteMetadata: {
     brand: `Sourcier.uk`,
+    copyright: 'Copyright © 2022 All rights reserved by Sourcier Ltd.',
   },
   plugins: [
     'gatsby-plugin-sass',
