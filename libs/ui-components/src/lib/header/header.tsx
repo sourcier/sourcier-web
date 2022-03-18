@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -15,7 +14,7 @@ export function Header({ brand, nav }: HeaderProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <nav className="shadow-sm bg-slate-900">
+    <nav className="shadow-sm bg-primary">
       <div className="max-w-3xl px-4 mx-auto">
         <div className="flex justify-between">
           <div className="flex space-x-7">
@@ -37,7 +36,7 @@ export function Header({ brand, nav }: HeaderProps) {
                 nav.map(({ text, href }, idx) => (
                   <a
                     href={href}
-                    className="px-2 py-4 font-semibold text-white hover:text-pink-300"
+                    className="px-2 py-4 font-semibold text-white hover:text-amber"
                     key={`nav-item-${idx}`}
                   >
                     {text}

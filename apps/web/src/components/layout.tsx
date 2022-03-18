@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { Header } from '@sourcier/ui-components';
+import { Header, Footer } from '@sourcier/ui-components';
 
 interface LayoutProps {
   pageTitle?: string;
@@ -32,10 +32,12 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         ]}
       />
 
-      <main className="max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-slate">
+      <main className="max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-grey">
         {pageTitle && <h1>{pageTitle}</h1>}
         {children}
       </main>
+
+      <Footer copyright="Copyright © 2022 - All rights reserved by Sourcier Ltd." />
     </>
   );
 };
