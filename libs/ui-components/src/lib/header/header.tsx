@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 export interface HeaderProps {
@@ -13,16 +13,20 @@ export interface HeaderProps {
 export function Header({ brand, nav }: HeaderProps) {
   const [isVisible, setIsVisible] = useState(false);
 
+  useEffect(() => {
+    if (document) document.body.style.overflow = isVisible ? 'hidden' : 'auto';
+  }, [isVisible]);
+
   return (
-    <nav className="shadow-sm bg-grey-900 text-grey-900-contrast">
+    <nav className="pt-4 bg-grey-900 text-grey-900-contrast">
       <div className="max-w-3xl px-4 mx-auto">
-        <div className="flex justify-between">
+        <div className="flex justify-between pb-4">
           <div className="flex space-x-7">
             <div>
               {/* brand */}
               <a href="/" className="flex items-center px-2 py-4">
                 <span
-                  className="text-lg font-semibold text-white"
+                  className="text-xl font-semibold"
                   data-testid="site-brand"
                 >
                   {brand}
@@ -36,7 +40,7 @@ export function Header({ brand, nav }: HeaderProps) {
                 nav.map(({ text, href }, idx) => (
                   <a
                     href={href}
-                    className="px-2 py-4 font-semibold text-white hover:text-amber"
+                    className="px-2 py-4 font-semibold hover:text-amber"
                     key={`nav-item-${idx}`}
                   >
                     {text}
@@ -63,18 +67,18 @@ export function Header({ brand, nav }: HeaderProps) {
 
       {/* mobile menu */}
       <div
-        className={clsx({
-          hidden: !isVisible,
-        })}
+        className={clsx(
+          'h-screen text-center text-xl border-t-2 border-grey-800 pt-8',
+          {
+            hidden: !isVisible,
+          }
+        )}
       >
-        <ul className="px-4">
+        <ul>
           {nav &&
             nav.map(({ text, href }, idx) => (
               <li key={`mobile-nav-item-${idx}`}>
-                <a
-                  href={href}
-                  className="block px-2 py-4 text-sm text-white transition duration-300 active:text-amber"
-                >
+                <a href={href} className="block px-2 py-4">
                   {text}
                 </a>
               </li>

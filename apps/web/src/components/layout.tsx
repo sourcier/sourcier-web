@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
   `);
 
   return (
-    <>
+    <div className="flex flex-col justify-between h-screen">
       <Helmet>
         <title>{pageTitle || data.site.siteMetadata.brand}</title>
       </Helmet>
@@ -38,7 +38,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       </main>
 
       <Footer copyright="Copyright © 2022 - All rights reserved by Sourcier Ltd." />
-    </>
+    </div>
   );
 };
 
