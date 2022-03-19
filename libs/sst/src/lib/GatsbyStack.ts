@@ -16,7 +16,7 @@ export default class GatsbyStack extends sst.Stack {
         certificate: Certificate.fromCertificateArn(
           this,
           'SourcierUkCert',
-          'arn:aws:acm:eu-west-2:561381207426:certificate/d7f51f72-1e1c-4cc8-8631-3525a9aeddb2'
+          'arn:aws:acm:us-east-1:561381207426:certificate/d8f786c1-c7a4-4191-9e79-a5654cc45365'
         ),
       },
     });
