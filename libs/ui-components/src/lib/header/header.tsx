@@ -14,7 +14,17 @@ export function Header({ brand, nav }: HeaderProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (document) document.body.style.overflow = isVisible ? 'hidden' : 'auto';
+    if (document && window) {
+      if (isVisible) {
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${window.scrollY}px`;
+      } else {
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      }
+    }
   }, [isVisible]);
 
   return (
