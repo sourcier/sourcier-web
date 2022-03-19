@@ -1,0 +1,7 @@
+{
+  "*": [
+    "nx affected:lint --fix --base develop",
+    "nx affected:test --bail --base develop",
+    "nx format:write --base develop"
+  ]
+}
