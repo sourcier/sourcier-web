@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx affected:lint; nx affected:test"
+    "test": "nx affected:lint; nx affected:test",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -82,7 +83,9 @@
     "eslint-plugin-react-hooks": "4.3.0",
     "gatsby-plugin-postcss": "^5.7.0",
     "gatsby-plugin-sass": "5.2.0",
+    "husky": ">=6",
     "jest": "27.2.3",
+    "lint-staged": ">=10",
     "postcss": "^8.4.6",
     "postcss-import": "^14.0.2",
     "prettier": "^2.5.1",
