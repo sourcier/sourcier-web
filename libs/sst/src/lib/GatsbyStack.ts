@@ -1,18 +1,18 @@
 import * as sst from '@serverless-stack/resources';
 import { Certificate } from 'aws-cdk-lib/aws-certificatemanager';
-
 export default class GatsbyStack extends sst.Stack {
   constructor(scope: sst.App, id: string, props?: sst.StackProps) {
     super(scope, id, props);
+
+    const isProduction = scope.stage === 'main';
 
     const site = new sst.StaticSite(this, 'gatsby-site', {
       path: 'apps/web',
       buildOutput: 'public',
       customDomain: {
         isExternalDomain: true,
-        domainName:
-          scope.stage === 'main' ? 'sourcier.uk' : `${scope.stage}.sourcier.uk`,
-        domainAlias: scope.stage === 'prod' ? 'www.sourcier.uk' : undefined,
+        domainName: isProduction ? 'sourcier.uk' : `${scope.stage}.sourcier.uk`,
+        domainAlias: isProduction ? 'www.sourcier.uk' : undefined,
         certificate: Certificate.fromCertificateArn(
           this,
           'SourcierUkCert',
