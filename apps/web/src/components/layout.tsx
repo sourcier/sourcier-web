@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
   `);
 
   return (
-    <div className="flex flex-col justify-between h-screen">
+    <div className="flex flex-col h-screen">
       <Helmet>
         <title>{pageTitle || data.site.siteMetadata.brand}</title>
       </Helmet>
@@ -32,7 +32,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         ]}
       />
 
-      <main className="max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-grey">
+      <main className="container flex-grow max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-grey">
         {pageTitle && <h1>{pageTitle}</h1>}
         {children}
       </main>

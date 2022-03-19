@@ -2,7 +2,7 @@
 
 exports[`Index should render successfully 1`] = `
 <div
-  className="flex flex-col justify-between h-screen"
+  className="flex flex-col h-screen"
 >
   <nav
     className="pt-4 bg-grey-900 text-grey-900-contrast"
@@ -98,7 +98,7 @@ exports[`Index should render successfully 1`] = `
     </div>
   </nav>
   <main
-    className="max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-grey"
+    className="container flex-grow max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-grey"
   >
     <article
       className="prose"
