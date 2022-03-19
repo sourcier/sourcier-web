@@ -7,6 +7,12 @@ export default class GatsbyStack extends sst.Stack {
     const site = new sst.StaticSite(this, 'gatsby-site', {
       path: 'apps/web',
       buildOutput: 'public',
+      customDomain: {
+        isExternalDomain: true,
+        domainName:
+          scope.stage === 'main' ? 'sourcier.uk' : `${scope.stage}.sourcier.uk`,
+        domainAlias: scope.stage === 'prod' ? 'www.sourcier.uk' : undefined,
+      },
     });
 
     this.addOutputs({
