@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
 
 export interface HeaderProps {
   brand: string;
@@ -8,9 +8,16 @@ export interface HeaderProps {
     text: string;
     href: string;
   }[];
+  isDarkMode?: boolean;
+  toggleDarkMode?: () => void;
 }
 
-export function Header({ brand, nav }: HeaderProps) {
+export function Header({
+  brand,
+  nav,
+  toggleDarkMode,
+  isDarkMode,
+}: HeaderProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -28,8 +35,8 @@ export function Header({ brand, nav }: HeaderProps) {
   }, [isVisible]);
 
   return (
-    <nav className="pt-4 bg-grey-900 text-grey-900-contrast">
-      <div className="max-w-3xl px-4 mx-auto">
+    <nav className="pt-4 bg-white dark:bg-gray-700 dark:text-gray-700-contrast">
+      <div className="max-w-3xl px-4 mx-auto shadow-sm">
         <div className="flex justify-between pb-4">
           <div className="flex space-x-7">
             <div>
@@ -59,10 +66,23 @@ export function Header({ brand, nav }: HeaderProps) {
             </div>
           </div>
 
+          {/* Secondary Navbar items */}
+          <div className="flex items-center ml-auto mr-4 space-x-3 md:mr-0">
+            {toggleDarkMode && (
+              <button onClick={toggleDarkMode}>
+                {isDarkMode ? (
+                  <FaMoon className="w-5 h-5" />
+                ) : (
+                  <FaSun className="w-6 h-6" />
+                )}
+              </button>
+            )}
+          </div>
+
           {/* mobile menu button */}
           <div className="flex items-center md:hidden">
             <button
-              className="outline-none text-amber"
+              className="outline-none"
               onClick={() => setIsVisible(!isVisible)}
             >
               {isVisible ? (
@@ -78,7 +98,7 @@ export function Header({ brand, nav }: HeaderProps) {
       {/* mobile menu */}
       <div
         className={clsx(
-          'h-screen text-center text-xl border-t-2 border-grey-800 pt-8',
+          'h-screen text-center text-xl pt-8 dark:bg-gray-800 dark:text-gray-800-contrast',
           {
             hidden: !isVisible,
           }

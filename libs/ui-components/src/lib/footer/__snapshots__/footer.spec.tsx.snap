@@ -2,7 +2,7 @@
 
 exports[`Footer should render successfully 1`] = `
 <footer
-  className="p-16 text-center bg-grey-100 text-grey-100-contrast"
+  className="p-16 text-center bg-gray-100 text-gray-100-contrast dark:bg-gray-700 dark:text-gray-700-contrast"
 >
   <div>
     <p>

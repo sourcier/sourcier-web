@@ -5,10 +5,10 @@ exports[`Index should render successfully 1`] = `
   className="flex flex-col h-screen"
 >
   <nav
-    className="pt-4 bg-grey-900 text-grey-900-contrast"
+    className="pt-4 bg-white dark:bg-gray-700 dark:text-gray-700-contrast"
   >
     <div
-      className="max-w-3xl px-4 mx-auto"
+      className="max-w-3xl px-4 mx-auto shadow-sm"
     >
       <div
         className="flex justify-between pb-4"
@@ -45,10 +45,37 @@ exports[`Index should render successfully 1`] = `
           </div>
         </div>
         <div
+          className="flex items-center ml-auto mr-4 space-x-3 md:mr-0"
+        >
+          <button
+            onClick={[Function]}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
           className="flex items-center md:hidden"
         >
           <button
-            className="outline-none text-amber"
+            className="outline-none"
             onClick={[Function]}
           >
             <svg
@@ -75,7 +102,7 @@ exports[`Index should render successfully 1`] = `
       </div>
     </div>
     <div
-      className="h-screen text-center text-xl border-t-2 border-grey-800 pt-8 hidden"
+      className="h-screen text-center text-xl pt-8 dark:bg-gray-800 dark:text-gray-800-contrast hidden"
     >
       <ul>
         <li>
@@ -98,18 +125,16 @@ exports[`Index should render successfully 1`] = `
     </div>
   </nav>
   <main
-    className="container flex-grow max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-grey"
+    className="container flex-grow max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-gray dark:prose-invert"
   >
-    <article
-      className="prose"
-    >
+    <article>
       <p>
         I'm making this by following the Gatsby Tutorial.
       </p>
     </article>
   </main>
   <footer
-    className="p-16 text-center bg-grey-100 text-grey-100-contrast"
+    className="p-16 text-center bg-gray-100 text-gray-100-contrast dark:bg-gray-700 dark:text-gray-700-contrast"
   >
     <div>
       <p>
