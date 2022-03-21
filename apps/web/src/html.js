@@ -15,7 +15,7 @@ export default function HTML(props) {
       </head>
       <body
         {...props.bodyAttributes}
-        className="text-gray-900 bg-white dark:bg-gray-800 dark:text-gray-800-contrast"
+        className="text-gray-900 bg-white dark:bg-gray-900 dark:text-gray-900-contrast"
       >
         {props.preBodyComponents}
         <div

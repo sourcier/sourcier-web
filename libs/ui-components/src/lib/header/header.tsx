@@ -35,8 +35,8 @@ export function Header({
   }, [isVisible]);
 
   return (
-    <nav className="pt-4 bg-white dark:bg-gray-700 dark:text-gray-700-contrast">
-      <div className="max-w-3xl px-4 mx-auto shadow-sm">
+    <nav className="pt-4 bg-white border-b border-gray-50 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-900-contrast">
+      <div className="max-w-3xl px-4 mx-auto">
         <div className="flex justify-between pb-4">
           <div className="flex space-x-7">
             <div>
@@ -57,7 +57,7 @@ export function Header({
                 nav.map(({ text, href }, idx) => (
                   <a
                     href={href}
-                    className="px-2 py-4 font-semibold hover:text-amber"
+                    className="px-2 py-4 font-semibold"
                     key={`nav-item-${idx}`}
                   >
                     {text}
@@ -98,7 +98,7 @@ export function Header({
       {/* mobile menu */}
       <div
         className={clsx(
-          'h-screen text-center text-xl pt-8 dark:bg-gray-800 dark:text-gray-800-contrast',
+          'h-screen text-center text-xl pt-8 dark:bg-gray-900 dark:text-gray-900-contrast border-t border-gray-50 dark:border-gray-800',
           {
             hidden: !isVisible,
           }
