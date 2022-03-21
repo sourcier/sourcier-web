@@ -35,7 +35,11 @@ export function Header({
   }, [isVisible]);
 
   return (
-    <nav className="pt-4 bg-white border-b border-gray-50 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-900-contrast">
+    <nav
+      className={clsx(
+        'pt-4 bg-white border-b border-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-800-contrast'
+      )}
+    >
       <div className="max-w-3xl px-4 mx-auto">
         <div className="flex justify-between pb-4">
           <div className="flex space-x-7">
@@ -98,7 +102,7 @@ export function Header({
       {/* mobile menu */}
       <div
         className={clsx(
-          'h-screen text-center text-xl pt-8 dark:bg-gray-900 dark:text-gray-900-contrast border-t border-gray-50 dark:border-gray-800',
+          'h-screen text-center text-xl pt-8 dark:bg-gray-800 dark:text-gray-800-contrast border-t border-gray-50 dark:border-gray-700',
           {
             hidden: !isVisible,
           }

@@ -4,6 +4,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-postcss',
     'storybook-dark-mode',
+    'storybook-addon-gatsby',
   ],
   // uncomment the property below if you want to apply some webpack config globally
   // webpackFinal: async (config, { configType }) => {

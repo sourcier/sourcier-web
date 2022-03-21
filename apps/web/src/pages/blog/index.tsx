@@ -1,18 +1,25 @@
+import { Card } from '@sourcier/ui-components';
 import { graphql, Link } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
 
 import Layout from '../../components/layout';
 
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
-      {data.allMdx.nodes.map((node) => (
-        <article key={node.id}>
-          <h2>
-            <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
-          </h2>
-          <p>Posted: {node.frontmatter.date}</p>
-        </article>
-      ))}
+      {data.allMdx.nodes.map((node) => {
+        const image = getImage(node.frontmatter.hero_image);
+
+        return (
+          <Card
+            href={`/blog/${node.slug}`}
+            title={node.frontmatter.title}
+            image={image}
+            alt={node.frontmatter.hero_image.alt}
+            copy={`Posted: ${node.frontmatter.date}`}
+          />
+        );
+      })}
     </Layout>
   );
 };
@@ -24,6 +31,12 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          hero_image_alt
         }
         id
         slug
