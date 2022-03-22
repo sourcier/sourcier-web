@@ -1,4 +1,5 @@
 module.exports = {
+  layout: 'fullscreen',
   stories: [],
   addons: [
     '@storybook/addon-essentials',

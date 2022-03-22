@@ -5,7 +5,7 @@ import { heading, copy } from './hero-centered.mock';
 
 export default {
   component: HeroCentered,
-  title: 'Hero',
+  title: 'HeroCentered',
 } as Meta;
 
 const Template: Story<HeroProps> = (args) => <HeroCentered {...args} />;

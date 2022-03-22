@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { HeroImageOverlay } from '@sourcier/ui-components';
 
 import Layout from '../../components/layout';
 
@@ -14,19 +15,16 @@ const BlogPost = ({ data }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div className="max-w-6xl px-4 mx-auto my-8 lg:my-16">
+        <HeroImageOverlay
+          heading={data.mdx.frontmatter.title}
+          copy={data.mdx.excerpt}
+          imageUrl={
+            data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData
+              .images.fallback.src
+          }
+        />
+
         <div className="prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg">
-          <h1>{data.mdx.frontmatter.title}</h1>
-          <p>Posted: {data.mdx.frontmatter.date}</p>
-          <GatsbyImage
-            image={image}
-            alt={data.mdx.frontmatter.hero_image_alt}
-          />
-          <p>
-            Photo Credit:{' '}
-            <a href={data.mdx.frontmatter.hero_image_credit_link}>
-              {data.mdx.frontmatter.hero_image_credit_text}
-            </a>
-          </p>
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </div>
       </div>
@@ -50,6 +48,7 @@ export const query = graphql`
         }
       }
       body
+      excerpt
     }
   }
 `;
