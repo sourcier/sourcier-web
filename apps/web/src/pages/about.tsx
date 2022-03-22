@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <Layout pageTitle="About Me">
       <Hero
-        heading="🫣 Hi there!"
+        heading="👨‍💻 Hi there!"
         copy="I'm the proud creator of this site, which I built with Gatsby."
         fullHeight
       />

@@ -9,7 +9,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <div className="container max-w-4xl px-4 mx-auto my-8 lg:my-16">
+      <div className="max-w-6xl px-4 mx-auto my-8 lg:my-16">
         <div className="prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg">
           <h1>{data.mdx.frontmatter.title}</h1>
           <p>Posted: {data.mdx.frontmatter.date}</p>

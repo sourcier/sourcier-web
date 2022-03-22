@@ -1,4 +1,5 @@
-import { BsMoonStars, BsSun } from 'react-icons/bs';
+import clsx from 'clsx';
+import { BsMoon, BsSun } from 'react-icons/bs';
 import { CgMenuLeft } from 'react-icons/cg';
 
 export interface NavbarProps {
@@ -21,7 +22,7 @@ export const Navbar = ({
     <div className="navbar bg-base-200">
       <div className="navbar-start">
         <label htmlFor="my-drawer" className="btn btn-ghost drawer-button">
-          <CgMenuLeft />
+          <CgMenuLeft className="inline-block w-4 h-4" />
         </label>
         <a
           className="text-xl normal-case btn btn-ghost"
@@ -39,8 +40,14 @@ export const Navbar = ({
             </li>
           ))}
         </ul>
-        <button className="btn btn-ghost" onClick={toggleDarkMode}>
-          {isDarkMode ? <BsSun /> : <BsMoonStars />}
+        <button
+          className={clsx('btn btn-ghost swap swap-rotate', {
+            'swap-active': isDarkMode,
+          })}
+          onClick={toggleDarkMode}
+        >
+          <BsSun className="inline-block w-4 h-4 swap-on" />
+          <BsMoon className="inline-block w-4 h-4 swap-off" />
         </button>
       </div>
     </div>
