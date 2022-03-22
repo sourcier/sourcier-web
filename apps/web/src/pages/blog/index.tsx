@@ -7,7 +7,7 @@ import Layout from '../../components/layout';
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
-      <div className="grid grid-cols-1 gap-8 px-2 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container grid grid-cols-1 gap-8 px-2 mx-auto my-8 md:grid-cols-2 lg:grid-cols-3">
         {data.allMdx.nodes.map((node) => {
           const image = getImage(node.frontmatter.hero_image);
 

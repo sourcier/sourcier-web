@@ -121,7 +121,7 @@ exports[`Index should render successfully 1`] = `
       </div>
     </div>
     <div
-      className="flex-1 py-8 mx-auto"
+      className="flex-1"
     >
       <div
         className="hero min-h-full"

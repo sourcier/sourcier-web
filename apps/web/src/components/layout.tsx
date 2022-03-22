@@ -91,7 +91,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
             toggleDarkMode={toggleDarkMode}
             isDarkMode={isDarkMode}
           />
-          <div className="flex-1 py-8 mx-auto">{children}</div>
+          <div className="flex-1">{children}</div>
           <Footer copyright={data.site.siteMetadata.copyright} />
         </div>
         <Sidebar brand={data.site.siteMetadata.brand} nav={nav} />
