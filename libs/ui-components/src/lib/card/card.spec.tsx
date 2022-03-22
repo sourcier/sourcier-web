@@ -1,21 +1,12 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
 import renderer from 'react-test-renderer';
 
 import Card from './card';
-import { href, title, alt, copy } from './card.mock';
+import { href, heading, copy } from './card.mock';
 
 describe('Card', () => {
   it('should render successfully', () => {
     const tree = renderer
-      .create(
-        <Card
-          href={href}
-          title={title}
-          copy={copy}
-          image={{} as IGatsbyImageData}
-          alt={alt}
-        />
-      )
+      .create(<Card href={href} heading={heading} copy={copy} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

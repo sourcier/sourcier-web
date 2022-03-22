@@ -16,6 +16,7 @@
     "@headlessui/react": "^1.4.3",
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
+    "@tailwindcss/line-clamp": "^0.3.1",
     "clsx": "^1.1.1",
     "core-js": "^3.6.5",
     "gatsby": "4.2.0",

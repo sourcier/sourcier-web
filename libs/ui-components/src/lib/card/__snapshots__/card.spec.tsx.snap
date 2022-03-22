@@ -2,58 +2,50 @@
 
 exports[`Card should render successfully 1`] = `
 <div
-  className="max-w-sm mb-8 overflow-hidden bg-white border border-gray-100 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+  className="my-8 shadow-xl first:mt-0 last:mb-0 card w-96 bg-base-100"
 >
-  <a
-    href="/#"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-  >
-    <img
-      alt="random photo"
-      image={Object {}}
-    />
-  </a>
   <div
-    className="p-5"
+    className="card-body"
   >
     <h2
-      className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+      className="card-title"
     >
       title
     </h2>
     <p
-      className="mb-3 font-normal text-gray-700 dark:text-gray-400"
+      className="line-clamp-3"
     >
       Lorem ipsum dolor sit amet, enim officia aliquip ipsum ullamco irure eiusmod esse ullamco est nulla Lorem dolor nulla exercitation proident.
     </p>
-    <a
-      className="inline-flex items-center w-full px-3 py-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      href="/#"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
+    <div
+      className="justify-center mt-4 card-actions"
     >
-      Read more
-      <svg
-        className="w-4 h-4 ml-2 -mr-1"
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 448 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
+      <a
+        className="flex-1 btn btn-primary"
+        href="#"
       >
-        <path
-          d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
-        />
-      </svg>
-    </a>
+        Read More 
+        <svg
+          className="ml-3"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 448 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
+          />
+        </svg>
+      </a>
+    </div>
   </div>
 </div>
 `;

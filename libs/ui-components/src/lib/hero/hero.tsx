@@ -1,11 +1,19 @@
+import clsx from 'clsx';
+
 export interface HeroProps {
   heading: string;
-  copy: string;
+  copy?: string;
+  fullHeight?: boolean;
 }
 
-export function Hero({ heading, copy }: HeroProps) {
+export function Hero({ heading, copy, fullHeight = false }: HeroProps) {
   return (
-    <div className="min-h-[75vh] hero">
+    <div
+      className={clsx('hero', {
+        'min-h-[15vh]': !fullHeight,
+        'min-h-full': fullHeight,
+      })}
+    >
       <div className="text-center hero-content">
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">{heading}</h1>

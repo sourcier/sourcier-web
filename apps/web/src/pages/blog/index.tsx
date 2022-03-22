@@ -1,6 +1,6 @@
 import { Card } from '@sourcier/ui-components';
-import { graphql, Link } from 'gatsby';
-import { getImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../../components/layout';
 
@@ -13,10 +13,14 @@ const BlogPage = ({ data }) => {
         return (
           <Card
             href={`/blog/${node.slug}`}
-            title={node.frontmatter.title}
-            image={image}
-            alt={node.frontmatter.hero_image.alt}
-            copy={`Posted: ${node.frontmatter.date}`}
+            heading={node.frontmatter.title}
+            image={
+              <GatsbyImage
+                image={image}
+                alt={node.frontmatter.hero_image.alt}
+              />
+            }
+            copy={node.excerpt}
           />
         );
       })}
@@ -40,6 +44,7 @@ export const query = graphql`
         }
         id
         slug
+        excerpt
       }
     }
   }

@@ -7,6 +7,7 @@ const AboutPage = () => {
       <Hero
         heading="🫣 Hi there!"
         copy="I'm the proud creator of this site, which I built with Gatsby."
+        fullHeight
       />
     </Layout>
   );

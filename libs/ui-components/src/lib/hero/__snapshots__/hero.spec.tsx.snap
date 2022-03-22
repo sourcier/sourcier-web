@@ -2,7 +2,7 @@
 
 exports[`Hero should render successfully 1`] = `
 <div
-  className="min-h-[75vh] hero"
+  className="hero min-h-[15vh]"
 >
   <div
     className="text-center hero-content"

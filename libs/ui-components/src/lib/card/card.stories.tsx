@@ -1,8 +1,7 @@
 import { Story, Meta } from '@storybook/react';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 import { Card, CardProps } from './card';
-import { href, title, copy, alt } from './card.mock';
+import { href, heading, copy } from './card.mock';
 
 export default {
   component: Card,
@@ -14,8 +13,6 @@ const Template: Story<CardProps> = (args) => <Card {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   href,
-  title,
+  heading,
   copy,
-  alt,
-  image: {} as IGatsbyImageData,
 };
