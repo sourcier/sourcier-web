@@ -1,12 +1,17 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { Header, Footer } from '@sourcier/ui-components';
-import { useEffect, useState } from 'react';
+import { Sidebar, Navbar, Footer } from '@sourcier/ui-components';
+import { SyntheticEvent, useEffect, useState } from 'react';
 
 interface LayoutProps {
   pageTitle?: string;
   children: React.ReactNode;
 }
+
+const nav = [
+  { text: 'About', href: '/about' },
+  { text: 'Blog', href: '/blog' },
+];
 
 const Layout = ({ pageTitle, children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
@@ -14,6 +19,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       site {
         siteMetadata {
           brand
+          copyright
         }
       }
     }
@@ -21,7 +27,9 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
+  const toggleDarkMode = (event: SyntheticEvent) => {
+    event.preventDefault();
+
     if (localStorage && document) {
       if (localStorage.getItem('color-theme')) {
         if (localStorage.getItem('color-theme') === 'light') {
@@ -70,28 +78,28 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen">
+    <>
       <Helmet>
         <title>{pageTitle || data.site.siteMetadata.brand}</title>
       </Helmet>
-
-      <Header
-        brand={data.site.siteMetadata.brand}
-        nav={[
-          { text: 'About', href: '/about' },
-          { text: 'Blog', href: '/blog' },
-        ]}
-        isDarkMode={isDarkMode}
-        toggleDarkMode={toggleDarkMode}
-      />
-
-      <main className="container flex-grow max-w-3xl px-4 py-8 mx-auto prose prose-lg prose-gray dark:prose-invert">
-        {pageTitle && <h1>{pageTitle}</h1>}
-        {children}
-      </main>
-
-      <Footer copyright="Copyright © 2022 - All rights reserved by Sourcier Ltd." />
-    </div>
+      <div className="w-full h-screen rounded drawer">
+        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <div className="flex flex-col drawer-content">
+          <Navbar
+            brand={data.site.siteMetadata.brand}
+            nav={nav}
+            toggleDarkMode={toggleDarkMode}
+            isDarkMode={isDarkMode}
+          />
+          <div className="flex-1 mx-auto">
+            {pageTitle && <h1>{pageTitle}</h1>}
+            {children}
+          </div>
+          <Footer copyright={data.site.siteMetadata.copyright} />
+        </div>
+        <Sidebar brand={data.site.siteMetadata.brand} nav={nav} />
+      </div>
+    </>
   );
 };
 

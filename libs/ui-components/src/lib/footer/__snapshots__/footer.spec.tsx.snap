@@ -2,7 +2,7 @@
 
 exports[`Footer should render successfully 1`] = `
 <footer
-  className="p-16 footer footer-center bg-base-300 text-base-content"
+  className="p-16 footer footer-center bg-base-200 text-base-content"
 >
   <div>
     <p>
