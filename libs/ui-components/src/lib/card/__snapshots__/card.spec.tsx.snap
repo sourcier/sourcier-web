@@ -2,7 +2,7 @@
 
 exports[`Card should render successfully 1`] = `
 <div
-  className="shadow-xl card bg-base-100"
+  className="overflow-hidden rounded-lg shadow-xl card bg-base-100"
 >
   <div
     className="card-body"
