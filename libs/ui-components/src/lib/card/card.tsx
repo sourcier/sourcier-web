@@ -1,4 +1,4 @@
-import { FaArrowRight } from 'react-icons/fa';
+import { BsArrowRight } from 'react-icons/bs';
 
 export interface CardProps {
   href: string;
@@ -16,7 +16,7 @@ export function Card({ href, heading, copy, image }: CardProps) {
         <p className="line-clamp-3">{copy}</p>
         <div className="justify-center mt-4 card-actions">
           <a className="flex-1 btn btn-primary" href={href}>
-            Read More <FaArrowRight className="ml-3" />
+            Read More <BsArrowRight className="ml-3" />
           </a>
         </div>
       </div>
