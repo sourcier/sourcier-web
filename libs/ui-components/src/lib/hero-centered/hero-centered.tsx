@@ -6,7 +6,7 @@ export interface HeroProps {
   fullHeight?: boolean;
 }
 
-export function Hero({ heading, copy, fullHeight = false }: HeroProps) {
+export function HeroCentered({ heading, copy, fullHeight = false }: HeroProps) {
   return (
     <div
       className={clsx('hero', {
@@ -24,4 +24,4 @@ export function Hero({ heading, copy, fullHeight = false }: HeroProps) {
   );
 }
 
-export default Hero;
+export default HeroCentered;

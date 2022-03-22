@@ -1,12 +1,12 @@
 import renderer from 'react-test-renderer';
 
-import Hero from './hero';
-import { heading, copy } from './hero.mock';
+import HeroCentered from './hero-centered';
+import { heading, copy } from './hero-centered.mock';
 
 describe('Hero', () => {
   it('should render successfully', () => {
     const tree = renderer
-      .create(<Hero copy={copy} heading={heading} />)
+      .create(<HeroCentered copy={copy} heading={heading} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
