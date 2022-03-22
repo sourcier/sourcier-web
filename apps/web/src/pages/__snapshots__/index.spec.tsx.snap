@@ -123,15 +123,28 @@ exports[`Index should render successfully 1`] = `
     <div
       className="flex-1 mx-auto"
     >
-      <article>
-        <p>
-          I'm making this by following the Gatsby Tutorial.
-        </p>
-        <img
-          alt="Random image"
-          src="../images/logo.svg"
-        />
-      </article>
+      <div
+        className="min-h-[75vh] hero"
+      >
+        <div
+          className="text-center hero-content"
+        >
+          <div
+            className="max-w-md"
+          >
+            <h1
+              className="text-5xl font-bold"
+            >
+              👋 Hello, world!
+            </h1>
+            <p
+              className="py-6"
+            >
+              I'm making this by following the Gatsby Tutorial
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <footer
       className="p-16 footer footer-center bg-base-200 text-base-content"
@@ -149,7 +162,7 @@ exports[`Index should render successfully 1`] = `
       htmlFor="my-drawer"
     />
     <aside
-      className="w-80 bg-base-100"
+      className="w-80 bg-base-200"
     >
       <ul
         className="p-4 overflow-y-auto menu text-base-content"

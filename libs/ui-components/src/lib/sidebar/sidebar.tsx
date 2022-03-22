@@ -9,7 +9,7 @@ export interface SidebarProps {
 export const Sidebar = ({ nav, brand }: SidebarProps) => (
   <div className="drawer-side">
     <label htmlFor="my-drawer" className="drawer-overlay"></label>
-    <aside className="w-80 bg-base-100">
+    <aside className="w-80 bg-base-200">
       <ul className="p-4 overflow-y-auto menu text-base-content">
         <li>
           <a href="/">{brand}</a>

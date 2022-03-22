@@ -1,13 +1,14 @@
+import { Hero } from '@sourcier/ui-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 
 export const IndexPage = () => {
   return (
     <Layout>
-      <article>
-        <p>I'm making this by following the Gatsby Tutorial.</p>
-        <StaticImage alt="Random image" src="../images/logo.svg" />
-      </article>
+      <Hero
+        copy="I'm making this by following the Gatsby Tutorial"
+        heading="👋 Hello, world!"
+      />
     </Layout>
   );
 };

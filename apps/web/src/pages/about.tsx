@@ -1,11 +1,13 @@
+import { Hero } from '@sourcier/ui-components';
 import Layout from '../components/layout';
 
 const AboutPage = () => {
   return (
     <Layout pageTitle="About Me">
-      <p>
-        Hi there! I'm the proud creator of this site, which I built with Gatsby.
-      </p>
+      <Hero
+        heading="🫣 Hi there!"
+        copy="I'm the proud creator of this site, which I built with Gatsby."
+      />
     </Layout>
   );
 };
