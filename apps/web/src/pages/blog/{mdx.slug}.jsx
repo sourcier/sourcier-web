@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { HeroImageOverlay, HeroWithImage } from '@sourcier/ui-components';
+import { HeroWithImageOverlay, HeroWithImage } from '@sourcier/ui-components';
 
 import Layout from '../../components/layout';
 
@@ -19,7 +19,7 @@ const BlogPost = ({ data }) => {
           className="hidden md:block"
         />
 
-        <HeroImageOverlay
+        <HeroWithImageOverlay
           heading={data.mdx.frontmatter.title}
           copy={data.mdx.excerpt}
           imageUrl={

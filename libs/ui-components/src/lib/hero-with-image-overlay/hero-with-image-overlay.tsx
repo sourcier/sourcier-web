@@ -1,18 +1,18 @@
 import clsx from 'clsx';
 
-export interface HeroImageOverlayProps {
+export interface HeroWithImageOverlayProps {
   imageUrl: string;
   heading: string;
   copy: string;
   className?: string;
 }
 
-export function HeroImageOverlay({
+export function HeroWithImageOverlay({
   imageUrl,
   heading,
   copy,
   className,
-}: HeroImageOverlayProps) {
+}: HeroWithImageOverlayProps) {
   return (
     <div
       className={clsx(
@@ -34,4 +34,4 @@ export function HeroImageOverlay({
   );
 }
 
-export default HeroImageOverlay;
+export default HeroWithImageOverlay;
