@@ -7,23 +7,25 @@ import Layout from '../../components/layout';
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
-      {data.allMdx.nodes.map((node) => {
-        const image = getImage(node.frontmatter.hero_image);
+      <div className="grid grid-cols-1 gap-8 px-2 md:grid-cols-2 lg:grid-cols-3">
+        {data.allMdx.nodes.map((node) => {
+          const image = getImage(node.frontmatter.hero_image);
 
-        return (
-          <Card
-            href={`/blog/${node.slug}`}
-            heading={node.frontmatter.title}
-            image={
-              <GatsbyImage
-                image={image}
-                alt={node.frontmatter.hero_image.alt}
-              />
-            }
-            copy={node.excerpt}
-          />
-        );
-      })}
+          return (
+            <Card
+              href={`/blog/${node.slug}`}
+              heading={node.frontmatter.title}
+              image={
+                <GatsbyImage
+                  image={image}
+                  alt={node.frontmatter.hero_image.alt}
+                />
+              }
+              copy={node.excerpt}
+            />
+          );
+        })}
+      </div>
     </Layout>
   );
 };

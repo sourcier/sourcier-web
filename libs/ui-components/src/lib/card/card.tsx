@@ -9,7 +9,7 @@ export interface CardProps {
 
 export function Card({ href, heading, copy, image }: CardProps) {
   return (
-    <div className="my-8 shadow-xl first:mt-0 last:mb-0 card w-96 bg-base-100">
+    <div className="shadow-xl card w-96 bg-base-100">
       {image && image}
       <div className="card-body">
         <h2 className="card-title">{heading}</h2>

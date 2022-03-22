@@ -2,7 +2,7 @@
 
 exports[`Card should render successfully 1`] = `
 <div
-  className="my-8 shadow-xl first:mt-0 last:mb-0 card w-96 bg-base-100"
+  className="shadow-xl card w-96 bg-base-100"
 >
   <div
     className="card-body"
