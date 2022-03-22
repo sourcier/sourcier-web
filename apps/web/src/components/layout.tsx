@@ -8,11 +8,6 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-const nav = [
-  { text: 'About', href: '/about' },
-  { text: 'Blog', href: '/blog' },
-];
-
 const Layout = ({ pageTitle, children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
     query {
@@ -20,6 +15,10 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         siteMetadata {
           brand
           copyright
+          nav {
+            href
+            text
+          }
         }
       }
     }
@@ -85,14 +84,17 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         <div className="flex flex-col drawer-content">
           <Navbar
             brand={data.site.siteMetadata.brand}
-            nav={nav}
+            nav={data.site.siteMetadata.nav}
             toggleDarkMode={toggleDarkMode}
             isDarkMode={isDarkMode}
           />
           <div className="flex-1">{children}</div>
           <Footer copyright={data.site.siteMetadata.copyright} />
         </div>
-        <Sidebar brand={data.site.siteMetadata.brand} nav={nav} />
+        <Sidebar
+          brand={data.site.siteMetadata.brand}
+          nav={data.site.siteMetadata.nav}
+        />
       </div>
     </>
   );

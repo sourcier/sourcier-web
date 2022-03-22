@@ -9,6 +9,10 @@ useStaticQuery.mockImplementation(() => ({
   site: {
     siteMetadata: {
       title: 'title',
+      nav: [
+        { text: 'About', href: '/about' },
+        { text: 'Blog', href: '/blog' },
+      ],
     },
   },
 }));

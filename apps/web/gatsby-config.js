@@ -3,6 +3,10 @@ module.exports = {
   siteMetadata: {
     brand: `Sourcier`,
     copyright: 'Copyright © 2022 All rights reserved by Sourcier Ltd.',
+    nav: [
+      { text: 'About', href: '/about' },
+      { text: 'Blog', href: '/blog' },
+    ],
   },
   plugins: [
     'gatsby-plugin-sass',
