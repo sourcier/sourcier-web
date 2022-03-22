@@ -1,15 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HeroCentered should render successfully 1`] = `
+exports[`HeroWithImage should render successfully 1`] = `
 <div
-  className="hero min-h-[15vh]"
+  className="min-h-[25vh] hero rounded-lg my-8"
 >
   <div
-    className="text-center hero-content"
+    className="flex-row-reverse hero-content"
   >
-    <div
-      className="max-w-md"
-    >
+    <img
+      alt="Random unsplash image"
+      className="max-w-sm rounded-lg shadow-2xl lg:max-w-xl"
+      src="https://source.unsplash.com/random"
+    />
+    <div>
       <h1
         className="text-5xl font-bold"
       >
