@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { Sidebar, Navbar, Footer } from '@sourcier/ui-components';
-import { SyntheticEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface LayoutProps {
   pageTitle?: string;
@@ -27,9 +27,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDarkMode = (event: SyntheticEvent) => {
-    event.preventDefault();
-
+  const toggleDarkMode = () => {
     if (localStorage && document) {
       if (localStorage.getItem('color-theme')) {
         if (localStorage.getItem('color-theme') === 'light') {

@@ -1,6 +1,5 @@
-import clsx from 'clsx';
-import { SyntheticEvent } from 'react';
-import { FaBars, FaSun, FaMoon } from 'react-icons/fa';
+import { BsMoonStars, BsSun } from 'react-icons/bs';
+import { CgMenuLeft } from 'react-icons/cg';
 
 export interface NavbarProps {
   brand: string;
@@ -9,7 +8,7 @@ export interface NavbarProps {
     href: string;
   }[];
   isDarkMode?: boolean;
-  toggleDarkMode?: (event: SyntheticEvent) => void;
+  toggleDarkMode?: () => void;
 }
 
 export const Navbar = ({
@@ -22,9 +21,13 @@ export const Navbar = ({
     <div className="navbar bg-base-200">
       <div className="navbar-start">
         <label htmlFor="my-drawer" className="btn btn-ghost drawer-button">
-          <FaBars />
+          <CgMenuLeft />
         </label>
-        <a className="text-xl normal-case btn btn-ghost" href="/">
+        <a
+          className="text-xl normal-case btn btn-ghost"
+          href="/"
+          data-testid="site-brand"
+        >
           {brand}
         </a>
       </div>
@@ -36,17 +39,9 @@ export const Navbar = ({
             </li>
           ))}
         </ul>
-        <label
-          className={clsx('swap btn btn-ghost', { 'swap-active': isDarkMode })}
-          onClick={toggleDarkMode}
-        >
-          <div className="swap-on">
-            <FaSun className="fill-current swap-on" />
-          </div>
-          <div className="swap-off">
-            <FaMoon className="fill-current swap-off" />
-          </div>
-        </label>
+        <button className="btn btn-ghost" onClick={toggleDarkMode}>
+          {isDarkMode ? <BsSun /> : <BsMoonStars />}
+        </button>
       </div>
     </div>
   );

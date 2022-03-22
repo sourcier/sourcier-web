@@ -4,6 +4,6 @@ describe('web', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
-    getGreeting().contains('Sourcier.uk');
+    getGreeting().contains('Sourcier');
   });
 });
