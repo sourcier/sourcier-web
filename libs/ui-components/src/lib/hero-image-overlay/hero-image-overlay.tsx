@@ -1,18 +1,24 @@
-/* eslint-disable-next-line */
+import clsx from 'clsx';
+
 export interface HeroImageOverlayProps {
   imageUrl: string;
   heading: string;
   copy: string;
+  className?: string;
 }
 
 export function HeroImageOverlay({
   imageUrl,
   heading,
   copy,
+  className,
 }: HeroImageOverlayProps) {
   return (
     <div
-      className="min-h-[35vh] hero md:hidden rounded-lg overflow-hidden my-8"
+      className={clsx(
+        'min-h-[35vh] hero rounded-lg overflow-hidden my-8',
+        className
+      )}
       style={{
         backgroundImage: `url(${imageUrl})`,
       }}

@@ -1,3 +1,4 @@
+export * from './lib/hero-with-image/hero-with-image';
 export * from './lib/hero-image-overlay/hero-image-overlay';
 export * from './lib/hero-centered/hero-centered';
 export * from './lib/sidebar/sidebar';
