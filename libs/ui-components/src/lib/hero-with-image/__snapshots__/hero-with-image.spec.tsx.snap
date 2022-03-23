@@ -2,7 +2,7 @@
 
 exports[`HeroWithImage should render successfully 1`] = `
 <div
-  className="min-h-[25vh] hero rounded-lg my-8"
+  className="min-h-[25vh] hero rounded-lg my-8 bg-gradient-to-t from-base-200 to-base-100 p-4 shadow-sm"
 >
   <div
     className="flex-row-reverse hero-content"

@@ -16,7 +16,12 @@ export function HeroWithImage({
   className,
 }: HeroWithImageProps) {
   return (
-    <div className={clsx('min-h-[25vh] hero rounded-lg my-8', className)}>
+    <div
+      className={clsx(
+        'min-h-[25vh] hero rounded-lg my-8 bg-gradient-to-t from-base-200 to-base-100 p-4 shadow-sm',
+        className
+      )}
+    >
       <div className="flex-row-reverse hero-content">
         <img
           src={imageUrl}
