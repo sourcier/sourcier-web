@@ -4,5 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
+import { wrapRootElement as wrap } from './src/components/wrap-root-element';
+
 import 'gatsby-remark-vscode/styles.css';
 import './src/global.scss';
+
+export const wrapRootElement = wrap;
