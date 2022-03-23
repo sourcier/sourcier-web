@@ -2,6 +2,7 @@ import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/dracula';
 import rangeParser from 'parse-numeric-range';
+import clsx from 'clsx';
 
 const calculateLinesToHighlight = (raw) => {
   const lineNumbers = rangeParser(raw);
@@ -14,14 +15,9 @@ const calculateLinesToHighlight = (raw) => {
 
 const copyToClipboard = (str) => {
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(str).then(
-      function () {
-        console.log('Copying to clipboard was successful!');
-      },
-      function (err) {
-        console.error('Could not copy text: ', err);
-      }
-    );
+    navigator.clipboard.writeText(str).then(function (err) {
+      console.error('Could not copy text: ', err);
+    });
   } else if (window['clipboardData']) {
     // Internet Explorer
     window['clipboardData'].setData('Text', str);
@@ -39,76 +35,25 @@ const Code = (props) => {
   );
 
   return (
-    <div
-      style={{
-        background: '#011627',
-        borderRadius: '0.5rem',
-        marginTop: '2rem',
-        marginBottom: '2rem',
-        paddingLeft: '1.5rem',
-      }}
-    >
-      <div style={{ display: 'flex', position: 'relative' }}>
-        <div
-          style={{
-            background: '#ffffff',
-            marginRight: '1rem',
-            paddingLeft: '0.5rem',
-            paddingRight: '0.5rem',
-            textTransform: 'uppercase',
-            borderBottomLeftRadius: '0.5rem',
-            borderBottomRightRadius: '0.5rem',
-            fontFamily: 'Montserrat',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >{`${language}`}</div>
-        <div
-          style={{
-            color: '#9d9d9d',
-            fontFamily: 'Montserrat',
-            fontStyle: 'italic',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
+    <div className="bg-[#282a36] rounded-lg my-8 pl-6">
+      <div className="relative flex">
+        <div className="flex items-center justify-center px-2 mr-4 font-bold text-white uppercase rounded-b-lg bg-primary">{`${language}`}</div>
+        <div className="flex items-center justify-center font-serif italic text-gray-400">
           {file && `${file}`}
         </div>
-        <div style={{ flexGrow: '1' }}></div>
+        <div className="flex-1" />
         <button
           onClick={() => {
             copyToClipboard(code);
             setIsCopied(true);
             setTimeout(() => setIsCopied(false), 1000);
           }}
-          style={{
-            marginRight: '1.5rem',
-            marginTop: '0.5rem',
-            padding: '8px 12px',
-            background: '#00f5c426',
-            border: 'none',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            color: '#E2E8F0',
-            fontSize: '14px',
-            fontFamily: 'sans-serif',
-            lineHeight: '1',
-          }}
+          className="m-2 btn btn-primary btn-sm"
         >
           {isCopied ? '🎉 Copied!' : 'Copy'}
         </button>
       </div>
-      <div
-        style={{
-          overflow: 'auto',
-          background: '#011627',
-          borderRadius: '0.5rem',
-        }}
-      >
+      <div className="overflow-auto rounded-lg">
         <Highlight
           {...defaultProps}
           code={code}
@@ -116,22 +61,14 @@ const Code = (props) => {
           theme={theme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre
-              className={className}
-              style={{
-                ...style,
-                backgroundColor: 'transparent',
-                float: 'left',
-                minWidth: '100%',
-              }}
-            >
+            <pre className={clsx(className, 'm-0 px-0')} style={style}>
               {tokens.map((line, i) => (
                 <div
                   {...getLineProps({ line, key: i })}
                   style={{
-                    background: highlights(i) ? '#00f5c426' : 'transparent',
-                    display: 'block',
+                    background: highlights(i) ? '#44475a' : 'transparent',
                   }}
+                  className="block"
                 >
                   {line.map((token, key) => (
                     <span key={key} {...getTokenProps({ token, key })} />
