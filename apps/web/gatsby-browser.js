@@ -4,4 +4,5 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
+import 'gatsby-remark-vscode/styles.css';
 import './src/global.scss';

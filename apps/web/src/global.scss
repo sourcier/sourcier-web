@@ -1,3 +1,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+html[data-theme] .grvsc-container {
+  @apply bg-base-200;
+  @apply shadow-sm;
+}
+
+.grvsc-code {
+  @apply w-full;
+}

@@ -1,0 +1,29 @@
+---
+title: Syntax highlighting
+date: 2022-02-23
+hero_image: './james-barker-v3-zcCWMjgM-unsplash.jpg'
+hero_image_alt: 'Adult chocolate Labrador retriever'
+hero_image_credit_text: 'James Barker'
+hero_image_credit_link: 'https://unsplash.com/photos/v3-zcCWMjgM'
+---
+
+Lorem ipsum dolor sit amet, adipisicing dolor adipisicing do enim adipisicing deserunt esse officia velit veniam elit aute laborum ex elit enim consectetur eiusmod fugiat.
+
+```js {2,numberLines,diff}
+import { HeroCentered } from '@sourcier/ui-components';
+import Layout from '../components/layout';
+
+const AboutPage = () => {
+  return (
+    <Layout pageTitle="About Me">
+      <HeroCentered
++        heading="👨‍💻 Hi there!"
+-        copy="I'm the proud creator of this site, which I built with Gatsby."
+        fullHeight
+      />
+    </Layout>
+  );
+};
+
+export default AboutPage;
+```

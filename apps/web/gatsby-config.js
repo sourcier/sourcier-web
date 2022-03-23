@@ -51,6 +51,20 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.mdx', '.md'],
+        remarkPlugins: [
+          [
+            require('gatsby-remark-vscode').remarkPlugin,
+            {
+              theme: {
+                default: 'Light (Visual Studio)',
+                parentSelector: {
+                  'html[data-theme=dark]': 'Dark (Visual Studio)',
+                },
+              },
+              extensions: [],
+            },
+          ],
+        ],
       },
     },
     {
