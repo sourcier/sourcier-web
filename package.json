@@ -44,6 +44,8 @@
   "devDependencies": {
     "@babel/core": "7.12.13",
     "@babel/preset-typescript": "7.12.13",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@nrwl/cli": "13.8.8",
     "@nrwl/cypress": "13.8.8",
     "@nrwl/eslint-plugin-nx": "13.8.8",
