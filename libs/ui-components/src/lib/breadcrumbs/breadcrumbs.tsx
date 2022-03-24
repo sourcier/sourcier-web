@@ -23,7 +23,7 @@ export function Breadcrumbs({
   });
 
   return (
-    <div className="text-md breadcrumbs">
+    <div className="text-lg breadcrumbs">
       <ul>
         {crumbs.map((crumb, index, array) => {
           return (
