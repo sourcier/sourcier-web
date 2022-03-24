@@ -1,15 +1,19 @@
-import { Card } from '@sourcier/ui-components';
+import { Breadcrumbs, Card } from '@sourcier/ui-components';
 import { graphql } from 'gatsby';
 
 import Layout from '../../components/layout';
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data, location }) => {
   return (
     <Layout pageTitle="My Blog Posts">
+      <div className="px-4 my-8">
+        <Breadcrumbs path={location.pathname} leafAsFolder />
+      </div>
       <div className="grid max-w-6xl grid-cols-1 gap-8 px-4 mx-auto my-8 md:grid-cols-2 lg:grid-cols-3">
         {data.allMdx.nodes.map((node) => {
           return (
             <Card
+              key={node.id}
               href={`/blog/${node.slug}`}
               heading={node.frontmatter.title}
               imgSrc={
