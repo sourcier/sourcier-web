@@ -4,6 +4,12 @@ exports[`Card should render successfully 1`] = `
 <div
   className="overflow-hidden rounded-lg shadow-xl card bg-base-100"
 >
+  <figure>
+    <img
+      alt="Random image"
+      src="https://source.unsplash.com/random"
+    />
+  </figure>
   <div
     className="card-body"
   >

@@ -4,13 +4,16 @@ export interface CardProps {
   href: string;
   heading: string;
   copy: string;
-  image?: React.ReactNode;
+  imgSrc: string;
+  imgAlt: string;
 }
 
-export function Card({ href, heading, copy, image }: CardProps) {
+export function Card({ href, heading, copy, imgSrc, imgAlt }: CardProps) {
   return (
     <div className="overflow-hidden rounded-lg shadow-xl card bg-base-100">
-      {image && image}
+      <figure>
+        <img src={imgSrc} alt={imgAlt} />
+      </figure>
       <div className="card-body">
         <h2 className="card-title">{heading}</h2>
         <p className="line-clamp-3">{copy}</p>

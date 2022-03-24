@@ -1,6 +1,5 @@
 import { Card } from '@sourcier/ui-components';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../../components/layout';
 
@@ -9,18 +8,15 @@ const BlogPage = ({ data }) => {
     <Layout pageTitle="My Blog Posts">
       <div className="grid max-w-6xl grid-cols-1 gap-8 px-4 mx-auto my-8 md:grid-cols-2 lg:grid-cols-3">
         {data.allMdx.nodes.map((node) => {
-          const image = getImage(node.frontmatter.hero_image);
-
           return (
             <Card
               href={`/blog/${node.slug}`}
               heading={node.frontmatter.title}
-              image={
-                <GatsbyImage
-                  image={image}
-                  alt={node.frontmatter.hero_image.alt}
-                />
+              imgSrc={
+                node.frontmatter.hero_image.childImageSharp.gatsbyImageData
+                  .images.fallback.src
               }
+              imgAlt={node.frontmatter.hero_image.alt}
               copy={node.excerpt}
             />
           );
