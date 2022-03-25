@@ -4,7 +4,7 @@ export interface HeroWithImageProps {
   imageUrl: string;
   imageAlt: string;
   heading: string;
-  copy: string;
+  copy: React.ReactNode;
   className?: string;
 }
 

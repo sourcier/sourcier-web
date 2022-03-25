@@ -1,9 +1,19 @@
 import { Breadcrumbs, Card } from '@sourcier/ui-components';
 import { graphql } from 'gatsby';
+import { BsClockFill } from 'react-icons/bs';
 
 import Layout from '../../components/layout';
 
 const BlogPage = ({ data, location }) => {
+  const renderPills = (node) => (
+    <div className="badge badge-secondary">
+      <BsClockFill className="inline-block mr-2" />
+      {`${node.timeToRead} ${
+        node.timeToRead === 1 ? 'minute' : 'minutes'
+      } read`}
+    </div>
+  );
+
   return (
     <Layout pageTitle="My Blog Posts">
       <div className="max-w-6xl px-4 mx-auto my-8">
@@ -23,6 +33,7 @@ const BlogPage = ({ data, location }) => {
                 }
                 imgAlt={node.frontmatter.hero_image.alt}
                 copy={node.excerpt}
+                pills={renderPills(node)}
               />
             );
           })}
@@ -49,6 +60,7 @@ export const query = graphql`
         id
         slug
         excerpt
+        timeToRead
       }
     }
   }
