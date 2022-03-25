@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <div className="mt-16 bg-base-200 text-base-content">
+    <div className="bg-base-200 text-base-content">
       <div className="max-w-6xl px-4 mx-auto my-16">
         <div className="flex flex-col text-center md:flex-row md:text-left">
           <div className="mb-8 md:mb-0">

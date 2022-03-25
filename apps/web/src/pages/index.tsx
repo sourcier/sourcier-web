@@ -6,10 +6,11 @@ export const IndexPage = () => {
     <Layout>
       <div className="max-w-6xl px-4 mx-auto my-8">
         <HeroCentered
-          copy="I'm Roger. I build meaningful digital experiences."
+          copy="I'm Roger Rajaratnam. London based software engineer working on building meaningful digital experiences for the web &amp; mobile."
           heading="👋 hey there!"
           fullHeight
         />
+
         <Prose>
           <p>
             I love making sites and apps that are memorable and truly joyful to

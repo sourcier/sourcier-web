@@ -146,7 +146,7 @@ exports[`Index should render successfully 1`] = `
               <p
                 className="py-6"
               >
-                I'm Roger. I build meaningful digital experiences.
+                I'm Roger Rajaratnam. London based software engineer working on building meaningful digital experiences for the web & mobile.
               </p>
             </div>
           </div>
@@ -183,7 +183,7 @@ exports[`Index should render successfully 1`] = `
       </div>
     </div>
     <div
-      className="mt-16 bg-base-200 text-base-content"
+      className="bg-base-200 text-base-content"
     >
       <div
         className="max-w-6xl px-4 mx-auto my-16"

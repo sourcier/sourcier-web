@@ -39,6 +39,7 @@ const BlogPost = ({ data, location }) => {
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div className="max-w-6xl px-4 mx-auto my-8">
         <Breadcrumbs path={location.pathname} />
+
         <HeroWithImage
           heading={data.mdx.frontmatter.title}
           copy={renderCopy(data)}
@@ -49,6 +50,7 @@ const BlogPost = ({ data, location }) => {
           imageAlt={data.mdx.frontmatter.hero_image_alt}
           className="hidden md:block"
         />
+
         <HeroWithImageOverlay
           heading={data.mdx.frontmatter.title}
           copy={renderCopy(data)}
@@ -58,9 +60,37 @@ const BlogPost = ({ data, location }) => {
           }
           className="md:hidden"
         />
+
         <Prose>
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </Prose>
+
+        <div class="divider"></div>
+
+        <Prose>
+          <p>
+            Written by Roger Rajaratnam, London based software engineer working
+            on building delightful digital experiences for the web &amp; mobile.
+            Want to get in touch? Reach out on{' '}
+            <a
+              href="https://twitter.com/sourcier"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>{' '}
+            or by{' '}
+            <a
+              href="mailto:roger@sourcier.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              email
+            </a>
+            .
+          </p>
+        </Prose>
+
         {isProduction && (
           <div className="mt-16">
             <h2 className="my-8 text-2xl text-center">
