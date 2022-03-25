@@ -6,7 +6,16 @@ export const IndexPage = () => {
     <Layout>
       <div className="max-w-6xl px-4 mx-auto my-8">
         <HeroCentered
-          copy="I'm Roger Rajaratnam. London based software engineer working on building meaningful digital experiences for the web &amp; mobile."
+          copy={
+            <p className="py-6 text-xl">
+              I'm{' '}
+              <span className="badge badge-secondary badge-lg">
+                Roger Rajaratnam
+              </span>{' '}
+              a London based software engineer working on building meaningful
+              digital experiences for the web &amp; mobile.
+            </p>
+          }
           heading="👋 hey there!"
           fullHeight
         />

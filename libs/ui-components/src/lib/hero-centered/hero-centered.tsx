@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 export interface HeroProps {
   heading: string;
-  copy?: string;
+  copy?: React.ReactNode;
   fullHeight?: boolean;
 }
 
@@ -19,8 +19,8 @@ export function HeroCentered({ heading, copy, fullHeight = false }: HeroProps) {
     >
       <div className="text-center hero-content">
         <div className="max-w-md">
-          <h1 className="text-5xl font-bold">{heading}</h1>
-          <p className="py-6">{copy}</p>
+          <h1 className="text-6xl font-bold">{heading}</h1>
+          {copy}
         </div>
       </div>
     </div>

@@ -139,14 +139,22 @@ exports[`Index should render successfully 1`] = `
               className="max-w-md"
             >
               <h1
-                className="text-5xl font-bold"
+                className="text-6xl font-bold"
               >
                 👋 hey there!
               </h1>
               <p
-                className="py-6"
+                className="py-6 text-xl"
               >
-                I'm Roger Rajaratnam. London based software engineer working on building meaningful digital experiences for the web & mobile.
+                I'm
+                 
+                <span
+                  className="badge badge-secondary badge-lg"
+                >
+                  Roger Rajaratnam
+                </span>
+                 
+                a London based software engineer working on building meaningful digital experiences for the web & mobile.
               </p>
             </div>
           </div>

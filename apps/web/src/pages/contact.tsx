@@ -6,7 +6,7 @@ export const IndexPage = () => {
   return (
     <Layout>
       <div className="max-w-6xl px-4 mx-auto my-8">
-        <HeroCentered heading="🤙 say hi!" fullHeight />
+        <HeroCentered heading="🤙 say hey!" fullHeight />
         <Prose>
           <p>
             I enjoy connecting with others, drop me a message and let's talk!
