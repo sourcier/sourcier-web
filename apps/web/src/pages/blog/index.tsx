@@ -7,7 +7,7 @@ import Layout from '../../components/layout';
 const BlogPage = ({ data, location }) => {
   const renderPills = (node) => (
     <div className="badge badge-secondary">
-      <BsClockFill className="inline-block mr-2" />
+      <BsClockFill className="inline-block mr-1" />
       {`${node.timeToRead} ${
         node.timeToRead === 1 ? 'minute' : 'minutes'
       } read`}
