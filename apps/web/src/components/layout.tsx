@@ -20,7 +20,6 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       site {
         siteMetadata {
           brand
-          copyright
           nav {
             href
             text
@@ -89,7 +88,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
             isDarkMode={isDarkMode}
           />
           <div className="flex-1">{children}</div>
-          <Footer copyright={data.site.siteMetadata.copyright} />
+          <Footer />
         </div>
         <Sidebar
           brand={data.site.siteMetadata.brand}

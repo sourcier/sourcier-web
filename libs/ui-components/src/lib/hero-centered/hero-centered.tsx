@@ -10,7 +10,7 @@ export function HeroCentered({ heading, copy, fullHeight = false }: HeroProps) {
   return (
     <div
       className={clsx(
-        'hero rounded-lg my-8 bg-gradient-to-t from-base-200 to-base-100 p-4 shadow-sm',
+        'hero rounded-lg my-12 bg-gradient-to-t from-base-200 to-base-100 p-4 shadow-sm',
         {
           'min-h-[15vh]': !fullHeight,
           'min-h-full': fullHeight,

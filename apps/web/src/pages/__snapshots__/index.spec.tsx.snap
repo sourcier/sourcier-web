@@ -130,7 +130,7 @@ exports[`Index should render successfully 1`] = `
         className="max-w-6xl px-4 mx-auto my-8"
       >
         <div
-          className="hero rounded-lg my-8 bg-gradient-to-t from-base-200 to-base-100 p-4 shadow-sm min-h-full"
+          className="hero rounded-lg my-12 bg-gradient-to-t from-base-200 to-base-100 p-4 shadow-sm min-h-full"
         >
           <div
             className="text-center hero-content"
@@ -152,7 +152,7 @@ exports[`Index should render successfully 1`] = `
           </div>
         </div>
         <div
-          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg"
+          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary dark:prose-a:link-accent"
         >
           <p>
             I love making sites and apps that are memorable and truly joyful to use. My goal with this blog is to document and share the things I learn with every new project.
@@ -182,13 +182,77 @@ exports[`Index should render successfully 1`] = `
         </div>
       </div>
     </div>
-    <footer
-      className="p-16 footer footer-center bg-base-200 text-base-content"
+    <div
+      className="mt-16 bg-base-200 text-base-content"
     >
-      <div>
-        <p />
+      <div
+        className="max-w-6xl px-4 mx-auto my-16"
+      >
+        <div
+          className="flex flex-col text-center md:flex-row md:text-left"
+        >
+          <div
+            className="mb-8 md:mb-0"
+          >
+            <p>
+              Handcrafted with
+               
+              <span
+                aria-label="Heart emoji"
+                role="img"
+              >
+                ❤️
+              </span>
+               
+              in London, UK.
+            </p>
+            <p>
+              Copyright © 2022 All rights reserved by Sourcier Ltd.
+            </p>
+          </div>
+          <div
+            className="md:ml-auto md:text-right"
+          >
+            <p>
+              Projects on
+               
+              <a
+                className="underline link-accent"
+                href="https://github.com/sourcier"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
+            </p>
+            <p>
+              Follow on
+               
+              <a
+                className="underline link-accent"
+                href="https://twitter.com/sourcier"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Twitter
+              </a>
+            </p>
+            <p>
+              Contact via
+               
+              <a
+                className="underline link-accent"
+                href="mailto:roger@sourcier.uk"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Email
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
   </div>
   <div
     className="drawer-side"
