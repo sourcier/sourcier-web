@@ -1,3 +1,4 @@
+export * from './lib/prose/prose';
 export * from './lib/breadcrumbs/breadcrumbs';
 export * from './lib/hero-with-image/hero-with-image';
 export * from './lib/hero-with-image-overlay/hero-with-image-overlay';

@@ -152,7 +152,7 @@ exports[`Index should render successfully 1`] = `
           </div>
         </div>
         <div
-          className="my-8 prose prose-lg max-w-none dark:prose-invert"
+          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg"
         >
           <p>
             I love making sites and apps that are memorable and truly joyful to use. My goal with this blog is to document and share the things I learn with every new project.

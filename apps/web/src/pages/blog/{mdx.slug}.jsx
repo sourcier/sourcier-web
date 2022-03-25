@@ -6,6 +6,7 @@ import {
   HeroWithImageOverlay,
   HeroWithImage,
   Breadcrumbs,
+  Prose,
 } from '@sourcier/ui-components';
 
 import Layout from '../../components/layout';
@@ -41,9 +42,9 @@ const BlogPost = ({ data, location }) => {
           }
           className="md:hidden"
         />
-        <div className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg">
+        <Prose>
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
-        </div>
+        </Prose>
         {isProduction && (
           <div className="mt-16">
             <h2 className="my-8 text-2xl text-center">

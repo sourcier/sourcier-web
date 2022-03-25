@@ -1,4 +1,4 @@
-import { HeroCentered } from '@sourcier/ui-components';
+import { HeroCentered, Prose } from '@sourcier/ui-components';
 import Layout from '../components/layout';
 
 export const IndexPage = () => {
@@ -10,7 +10,7 @@ export const IndexPage = () => {
           heading="👋 hey there!"
           fullHeight
         />
-        <div className="my-8 prose prose-lg max-w-none dark:prose-invert">
+        <Prose>
           <p>
             I love making sites and apps that are memorable and truly joyful to
             use. My goal with this blog is to document and share the things I
@@ -28,7 +28,7 @@ export const IndexPage = () => {
             </a>
             .
           </p>
-        </div>
+        </Prose>
       </div>
     </Layout>
   );
