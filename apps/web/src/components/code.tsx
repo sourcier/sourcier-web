@@ -67,7 +67,10 @@ const Code = (props) => {
           theme={theme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={clsx(className, 'px-0 my-0')} style={style}>
+            <pre
+              className={clsx(className, 'px-0 my-0 min-w-full float-left')}
+              style={style}
+            >
               {tokens.map((line, i) => {
                 // convert tokens to raw code string for setting diff highlight background
                 const text: string = line.reduce(
