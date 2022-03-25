@@ -1,5 +1,7 @@
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { Giscus } from '@giscus/react';
+import { useSelector } from 'react-redux';
 import {
   HeroWithImageOverlay,
   HeroWithImage,
@@ -7,8 +9,11 @@ import {
 } from '@sourcier/ui-components';
 
 import Layout from '../../components/layout';
+import { selectIsDarkMode } from '../../store/slices/configSlice';
 
 const BlogPost = ({ data, location }) => {
+  const isDarkMode = useSelector(selectIsDarkMode);
+
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div className="max-w-6xl px-4 mx-auto my-8">
@@ -32,8 +37,25 @@ const BlogPost = ({ data, location }) => {
           }
           className="md:hidden"
         />
-        <div className="prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg">
+        <div className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg">
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        </div>
+        <div className="mt-16">
+          <h2 className="my-8 text-2xl text-center">
+            Did you find this article helpful?
+          </h2>
+          <Giscus
+            repo="sourcier/sourcier-web"
+            repoId="R_kgDOG0xBpA"
+            category="Comments"
+            categoryId="DIC_kwDOG0xBpM4COQ0_"
+            mapping="pathname"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            inputPosition="top"
+            theme={isDarkMode ? 'dark_dimmed' : 'light'}
+            lang="en"
+          />
         </div>
       </div>
     </Layout>

@@ -13,8 +13,10 @@
   },
   "private": true,
   "dependencies": {
+    "@giscus/react": "^1.1.2",
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
+    "@reduxjs/toolkit": "^1.8.0",
     "@tailwindcss/line-clamp": "^0.3.1",
     "@tailwindcss/typography": "^0.5.2",
     "clsx": "^1.1.1",
@@ -37,6 +39,7 @@
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
     "react-icons": "^4.3.1",
+    "react-redux": "^7.2.6",
     "regenerator-runtime": "0.13.7",
     "tailwindcss": "^3.0.20",
     "tslib": "^2.0.0"

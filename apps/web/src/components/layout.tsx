@@ -1,7 +1,10 @@
+import { useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { Sidebar, Navbar, Footer } from '@sourcier/ui-components';
-import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { setIsDarkMode, selectIsDarkMode } from '../store/slices/configSlice';
 
 interface LayoutProps {
   pageTitle?: string;
@@ -9,6 +12,9 @@ interface LayoutProps {
 }
 
 const Layout = ({ pageTitle, children }: LayoutProps) => {
+  const isDarkMode = useSelector(selectIsDarkMode);
+  const dispatch = useDispatch();
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -24,8 +30,6 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
     }
   `);
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
   const toggleDarkMode = () => {
     if (localStorage && document) {
       if (localStorage.getItem('color-theme')) {
@@ -33,24 +37,24 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
           document.documentElement.classList.add('dark');
           document.documentElement.setAttribute('data-theme', 'dark');
           localStorage.setItem('color-theme', 'dark');
-          setIsDarkMode(true);
+          dispatch(setIsDarkMode(true));
         } else {
           document.documentElement.classList.remove('dark');
           document.documentElement.setAttribute('data-theme', 'light');
           localStorage.setItem('color-theme', 'light');
-          setIsDarkMode(false);
+          dispatch(setIsDarkMode(false));
         }
       } else {
         if (document.documentElement.classList.contains('dark')) {
           document.documentElement.classList.remove('dark');
           document.documentElement.setAttribute('data-theme', 'light');
           localStorage.setItem('color-theme', 'light');
-          setIsDarkMode(false);
+          dispatch(setIsDarkMode(false));
         } else {
           document.documentElement.classList.add('dark');
           document.documentElement.setAttribute('data-theme', 'dark');
           localStorage.setItem('color-theme', 'dark');
-          setIsDarkMode(true);
+          dispatch(setIsDarkMode(true));
         }
       }
     }
@@ -65,14 +69,14 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       ) {
         document.documentElement.classList.add('dark');
         document.documentElement.setAttribute('data-theme', 'dark');
-        setIsDarkMode(true);
+        dispatch(setIsDarkMode(true));
       } else {
         document.documentElement.classList.remove('dark');
         document.documentElement.setAttribute('data-theme', 'light');
-        setIsDarkMode(false);
+        dispatch(setIsDarkMode(false));
       }
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
