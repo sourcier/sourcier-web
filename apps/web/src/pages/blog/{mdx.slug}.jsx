@@ -9,10 +9,14 @@ import {
 } from '@sourcier/ui-components';
 
 import Layout from '../../components/layout';
-import { selectIsDarkMode } from '../../store/slices/configSlice';
+import {
+  selectIsDarkMode,
+  selectIsProduction,
+} from '../../store/slices/configSlice';
 
 const BlogPost = ({ data, location }) => {
   const isDarkMode = useSelector(selectIsDarkMode);
+  const isProduction = useSelector(selectIsProduction);
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
@@ -40,23 +44,25 @@ const BlogPost = ({ data, location }) => {
         <div className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg">
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </div>
-        <div className="mt-16">
-          <h2 className="my-8 text-2xl text-center">
-            Did you find this article helpful?
-          </h2>
-          <Giscus
-            repo="sourcier/sourcier-web"
-            repoId="R_kgDOG0xBpA"
-            category="Comments"
-            categoryId="DIC_kwDOG0xBpM4COQ0_"
-            mapping="pathname"
-            reactionsEnabled="1"
-            emitMetadata="0"
-            inputPosition="top"
-            theme={isDarkMode ? 'dark_dimmed' : 'light'}
-            lang="en"
-          />
-        </div>
+        {isProduction && (
+          <div className="mt-16">
+            <h2 className="my-8 text-2xl text-center">
+              Did you find this article helpful?
+            </h2>
+            <Giscus
+              repo="sourcier/sourcier-web"
+              repoId="R_kgDOG0xBpA"
+              category="Comments"
+              categoryId="DIC_kwDOG0xBpM4COQ0_"
+              mapping="pathname"
+              reactionsEnabled="1"
+              emitMetadata="0"
+              inputPosition="top"
+              theme={isDarkMode ? 'dark_dimmed' : 'light'}
+              lang="en"
+            />
+          </div>
+        )}
       </div>
     </Layout>
   );
