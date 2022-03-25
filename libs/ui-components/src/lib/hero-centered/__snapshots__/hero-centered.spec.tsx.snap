@@ -2,7 +2,7 @@
 
 exports[`HeroCentered should render successfully 1`] = `
 <div
-  className="hero min-h-[15vh]"
+  className="hero rounded-lg my-8 bg-gradient-to-t from-base-200 to-base-100 p-4 shadow-sm min-h-[15vh]"
 >
   <div
     className="text-center hero-content"

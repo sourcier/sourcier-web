@@ -127,25 +127,55 @@ exports[`Index should render successfully 1`] = `
       className="flex-1"
     >
       <div
-        className="hero min-h-full"
+        className="max-w-6xl px-4 mx-auto my-8"
       >
         <div
-          className="text-center hero-content"
+          className="hero rounded-lg my-8 bg-gradient-to-t from-base-200 to-base-100 p-4 shadow-sm min-h-full"
         >
           <div
-            className="max-w-md"
+            className="text-center hero-content"
           >
-            <h1
-              className="text-5xl font-bold"
+            <div
+              className="max-w-md"
             >
-              👋 Hello, world!
-            </h1>
-            <p
-              className="py-6"
-            >
-              I'm making this by following the Gatsby Tutorial
-            </p>
+              <h1
+                className="text-5xl font-bold"
+              >
+                👋 hey there!
+              </h1>
+              <p
+                className="py-6"
+              >
+                I'm Roger. I build meaningful digital experiences.
+              </p>
+            </div>
           </div>
+        </div>
+        <div
+          className="my-8 prose prose-lg max-w-none dark:prose-invert"
+        >
+          <p>
+            I love making sites and apps that are memorable and truly joyful to use. My goal with this blog is to document and share the things I learn with every new project.
+          </p>
+          <p>
+            Need to get in touch with me? Reach out on
+             
+            <a
+              href="https://twitter.com/sourcier"
+            >
+              Twitter
+            </a>
+             or by
+             
+            <a
+              href="mailto:roger@sourcier.uk"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              email
+            </a>
+            .
+          </p>
         </div>
       </div>
     </div>

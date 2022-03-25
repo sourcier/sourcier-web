@@ -2,7 +2,8 @@ module.exports = {
   jsxRuntime: 'automatic',
   siteMetadata: {
     brand: `Sourcier`,
-    copyright: 'Copyright © 2022 All rights reserved by Sourcier Ltd.',
+    copyright:
+      'Copyright © 2022 All rights reserved by Sourcier Ltd. Handcrafted with ❤️ in London, UK.',
     nav: [
       { text: 'About', href: '/about' },
       { text: 'Blog', href: '/blog' },
