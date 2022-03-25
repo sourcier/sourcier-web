@@ -162,10 +162,13 @@ exports[`Index should render successfully 1`] = `
              
             <a
               href="https://twitter.com/sourcier"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               Twitter
             </a>
-             or by
+             
+            or by
              
             <a
               href="mailto:roger@sourcier.uk"

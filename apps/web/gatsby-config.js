@@ -7,6 +7,7 @@ module.exports = {
     nav: [
       { text: 'About', href: '/about' },
       { text: 'Blog', href: '/blog' },
+      { text: 'Contact', href: '/contact' },
     ],
   },
   plugins: [

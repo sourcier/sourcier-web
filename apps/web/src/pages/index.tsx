@@ -18,7 +18,14 @@ export const IndexPage = () => {
           </p>
           <p>
             Need to get in touch with me? Reach out on{' '}
-            <a href="https://twitter.com/sourcier">Twitter</a> or by{' '}
+            <a
+              href="https://twitter.com/sourcier"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>{' '}
+            or by{' '}
             <a
               href="mailto:roger@sourcier.uk"
               target="_blank"
