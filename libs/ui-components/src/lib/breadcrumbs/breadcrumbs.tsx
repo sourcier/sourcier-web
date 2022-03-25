@@ -6,21 +6,12 @@ export interface BreadcrumbsProps {
   leafAsFolder?: boolean;
 }
 
-export function Breadcrumbs({
-  path,
-  leafRewrite,
-  leafAsFolder,
-}: BreadcrumbsProps) {
+export function Breadcrumbs({ path, leafAsFolder }: BreadcrumbsProps) {
   const crumbs = path.split('/').filter(Boolean);
   const labels = crumbs.map((crumb) => crumb.replace(/-/g, ' '));
-  const links = crumbs.map((crumb, index, array) => {
-    if (index === array.length - 1 && leafRewrite) {
-      const path = array.slice(0, index + 1).join('/');
-      return path.replace(leafRewrite.pattern, leafRewrite.replacement);
-    }
-
-    return array.slice(0, index + 1).join('/');
-  });
+  const links = crumbs.map((crumb, index, array) =>
+    array.slice(0, index + 1).join('/')
+  );
 
   return (
     <div className="text-lg breadcrumbs">

@@ -9,17 +9,10 @@ import {
 import Layout from '../../components/layout';
 
 const BlogPost = ({ data, location }) => {
-  const pagePath = location.pathname
-    ? location.pathname.replace(/2022\//g, '')
-    : '';
-
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div className="max-w-6xl px-4 mx-auto my-8">
-        <Breadcrumbs
-          path={pagePath}
-          leafRewrite={{ pattern: 'blog/', replacement: 'blog/2022/' }}
-        />
+        <Breadcrumbs path={location.pathname} />
         <HeroWithImage
           heading={data.mdx.frontmatter.title}
           copy={data.mdx.excerpt}
