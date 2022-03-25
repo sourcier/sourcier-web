@@ -33,7 +33,7 @@ export const Navbar = ({
         </a>
       </div>
       <div className="navbar-end">
-        <ul className="p-0 menu menu-horizontal">
+        <ul className="hidden p-0 menu menu-horizontal sm:inline-flex">
           {nav.map(({ text, href }, idx) => (
             <li key={idx}>
               <a href={href}>{text}</a>

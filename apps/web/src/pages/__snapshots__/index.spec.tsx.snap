@@ -61,7 +61,7 @@ exports[`Index should render successfully 1`] = `
         className="navbar-end"
       >
         <ul
-          className="p-0 menu menu-horizontal"
+          className="hidden p-0 menu menu-horizontal sm:inline-flex"
         >
           <li>
             <a
