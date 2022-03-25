@@ -12,17 +12,17 @@ exports[`HeroWithImage should render successfully 1`] = `
       className="max-w-sm rounded-lg shadow-2xl lg:max-w-xl"
       src="https://source.unsplash.com/random"
     />
-    <div>
-      <h1
-        className="text-5xl font-bold"
-      >
-        Hello there
-      </h1>
-      <p
-        className="py-6"
-      >
+    <div
+      className="flex-1"
+    >
+      <div>
+        <h1
+          className="mb-3 text-5xl font-bold md:mb-5"
+        >
+          Hello there
+        </h1>
         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
+      </div>
     </div>
   </div>
 </div>

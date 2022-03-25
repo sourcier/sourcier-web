@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Giscus } from '@giscus/react';
 import { useSelector } from 'react-redux';
+import { BsCalendar2EventFill, BsClockFill } from 'react-icons/bs';
 import {
   HeroWithImageOverlay,
   HeroWithImage,
@@ -19,13 +20,28 @@ const BlogPost = ({ data, location }) => {
   const isDarkMode = useSelector(selectIsDarkMode);
   const isProduction = useSelector(selectIsProduction);
 
+  const renderCopy = (data) => (
+    <div className="text-center md:text-left text-md">
+      <p>
+        <BsCalendar2EventFill className="inline-block mr-2" />
+        {data.mdx.frontmatter.date}
+      </p>
+      <p>
+        <BsClockFill className="inline-block mr-2" />
+        {`${data.mdx.timeToRead} ${
+          data.mdx.timeToRead === 1 ? 'minute' : 'minutes'
+        } read`}
+      </p>
+    </div>
+  );
+
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div className="max-w-6xl px-4 mx-auto my-8">
         <Breadcrumbs path={location.pathname} />
         <HeroWithImage
           heading={data.mdx.frontmatter.title}
-          copy={data.mdx.excerpt}
+          copy={renderCopy(data)}
           imageUrl={
             data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData
               .images.fallback.src
@@ -35,7 +51,7 @@ const BlogPost = ({ data, location }) => {
         />
         <HeroWithImageOverlay
           heading={data.mdx.frontmatter.title}
-          copy={data.mdx.excerpt}
+          copy={renderCopy(data)}
           imageUrl={
             data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData
               .images.fallback.src
@@ -86,6 +102,7 @@ export const query = graphql`
       }
       body
       excerpt
+      timeToRead
     }
   }
 `;

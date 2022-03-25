@@ -28,9 +28,11 @@ export function HeroWithImage({
           alt={imageAlt}
           className="max-w-sm rounded-lg shadow-2xl lg:max-w-xl"
         />
-        <div>
-          <h1 className="text-5xl font-bold">{heading}</h1>
-          <p className="py-6">{copy}</p>
+        <div className="flex-1">
+          <div>
+            <h1 className="mb-3 text-5xl font-bold md:mb-5">{heading}</h1>
+            {copy}
+          </div>
         </div>
       </div>
     </div>

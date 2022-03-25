@@ -26,8 +26,8 @@ export function HeroWithImageOverlay({
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="text-center hero-content text-primary-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">{heading}</h1>
-          <p className="mb-5">{copy}</p>
+          <h1 className="mb-4 text-5xl font-bold">{heading}</h1>
+          {copy}
         </div>
       </div>
     </div>
