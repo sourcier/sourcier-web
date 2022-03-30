@@ -154,7 +154,7 @@ exports[`Index should render successfully 1`] = `
                   Roger Rajaratnam
                 </span>
                  
-                a London based software engineer working on building meaningful digital experiences for the web & mobile.
+                a London based software engineer working on building meaningful digital experiences.
               </p>
             </div>
           </div>
@@ -163,7 +163,7 @@ exports[`Index should render successfully 1`] = `
           className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary dark:prose-a:link-accent"
         >
           <p>
-            I love making sites and apps that are memorable and truly joyful to use. My goal with this blog is to document and share the things I learn with every new project.
+            I love making software that is memorable and truly joyful to use. My goal with this blog is to document and share the things I learn with every new project.
           </p>
           <p>
             Need to get in touch with me? Reach out on
@@ -203,7 +203,7 @@ exports[`Index should render successfully 1`] = `
             className="mb-8 md:mb-0"
           >
             <p>
-              Handcrafted with
+              Made with
                
               <span
                 aria-label="Heart emoji"

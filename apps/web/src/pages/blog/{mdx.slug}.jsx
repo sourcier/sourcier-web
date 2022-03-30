@@ -70,7 +70,7 @@ const BlogPost = ({ data, location }) => {
         <Prose>
           <p>
             Written by Roger Rajaratnam, a London based software engineer
-            working on building delightful digital experiences for the web &amp;
+            working on building delightful digital experiences for web &amp;
             mobile. Want to get in touch? Reach out on{' '}
             <a
               href="https://twitter.com/sourcier"

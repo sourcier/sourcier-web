@@ -5,7 +5,7 @@ export function Footer() {
         <div className="flex flex-col text-center md:flex-row md:text-left">
           <div className="mb-8 md:mb-0">
             <p>
-              Handcrafted with{' '}
+              Made with{' '}
               <span role="img" aria-label="Heart emoji">
                 ❤️
               </span>{' '}

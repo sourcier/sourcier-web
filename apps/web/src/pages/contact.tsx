@@ -8,9 +8,7 @@ export const IndexPage = () => {
       <div className="max-w-6xl px-4 mx-auto my-8">
         <HeroCentered heading="🤙 say hey!" fullHeight />
         <Prose>
-          <p>
-            I enjoy connecting with others, drop me a message and let's talk!
-          </p>
+          <p>I enjoy connecting with others, drop me a message, let's talk!</p>
           <p>
             Social media is great for informal chats.
             <br />

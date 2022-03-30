@@ -13,7 +13,7 @@ export const IndexPage = () => {
                 Roger Rajaratnam
               </span>{' '}
               a London based software engineer working on building meaningful
-              digital experiences for the web &amp; mobile.
+              digital experiences.
             </p>
           }
           heading="👋 hey there!"
@@ -22,9 +22,9 @@ export const IndexPage = () => {
 
         <Prose>
           <p>
-            I love making sites and apps that are memorable and truly joyful to
-            use. My goal with this blog is to document and share the things I
-            learn with every new project.
+            I love making software that is memorable and truly joyful to use. My
+            goal with this blog is to document and share the things I learn with
+            every new project.
           </p>
           <p>
             Need to get in touch with me? Reach out on{' '}

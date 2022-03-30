@@ -14,7 +14,7 @@ exports[`Footer should render successfully 1`] = `
         className="mb-8 md:mb-0"
       >
         <p>
-          Handcrafted with
+          Made with
            
           <span
             aria-label="Heart emoji"
