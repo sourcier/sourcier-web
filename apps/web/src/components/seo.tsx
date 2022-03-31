@@ -31,8 +31,22 @@ export const Seo = ({ description, lang = 'en', title, pathname }) => {
   return (
     <Helmet htmlAttributes={{ lang }}>
       <title>{metaTitle}</title>
-      <meta name="description" content={metaDescription} />
       {canonical && <link rel="canonical" href={canonical} />}
+      <meta name="description" content={metaDescription} />
+      <meta name="og:title" content={metaTitle} />
+      <meta name="og:description" content={metaDescription} />
+      <meta name="og:url" content={canonical} />
+      <meta name="og:type" content="website" />
+      <meta name="og:site" content="sourcier.uk" />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:site" content="@sourcier" />
+      <meta name="twitter:creator" content="@sourcier" />
+      <meta name="twitter:card" content="summary" />
+      {/* <meta name="twitter:card" content="summary_large_image" /> */}
+      {/* <meta name="og:image" content="" /> */}
+      {/* <meta name="og:image:width" content="" /> */}
+      {/* <meta name="og:image:height" content="" /> */}
     </Helmet>
   );
 };
