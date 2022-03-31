@@ -70,8 +70,8 @@ const BlogPost = ({ data, location }) => {
         <Prose>
           <p>
             Written by Roger Rajaratnam, a London based software engineer
-            working on building delightful digital experiences for web &amp;
-            mobile. Want to get in touch? Reach out on{' '}
+            working on building delightful digital experiences. Want to get in
+            touch? Reach out on{' '}
             <a
               href="https://twitter.com/sourcier"
               target="_blank"
@@ -91,25 +91,23 @@ const BlogPost = ({ data, location }) => {
           </p>
         </Prose>
 
-        {isProduction && (
-          <div className="mt-16">
-            <h2 className="my-8 text-2xl text-center">
-              Did you find this article helpful?
-            </h2>
-            <Giscus
-              repo="sourcier/sourcier-web"
-              repoId="R_kgDOG0xBpA"
-              category="Comments"
-              categoryId="DIC_kwDOG0xBpM4COQ0_"
-              mapping="pathname"
-              reactionsEnabled="1"
-              emitMetadata="0"
-              inputPosition="top"
-              theme={isDarkMode ? 'dark_dimmed' : 'light'}
-              lang="en"
-            />
-          </div>
-        )}
+        <div className="mt-16">
+          <h2 className="my-8 text-2xl text-center">
+            Did you find this article helpful?
+          </h2>
+          <Giscus
+            repo="sourcier/sourcier-web"
+            repoId="R_kgDOG0xBpA"
+            category="Comments"
+            categoryId="DIC_kwDOG0xBpM4COQ0_"
+            mapping="pathname"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            inputPosition="top"
+            theme={isDarkMode ? 'dark_dimmed' : 'light'}
+            lang="en"
+          />
+        </div>
       </div>
     </Layout>
   );
