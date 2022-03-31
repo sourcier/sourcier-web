@@ -11,14 +11,10 @@ import {
 } from '@sourcier/ui-components';
 
 import Layout from '../../components/layout';
-import {
-  selectIsDarkMode,
-  selectIsProduction,
-} from '../../store/slices/configSlice';
+import { selectIsDarkMode } from '../../store/slices/configSlice';
 
 const BlogPost = ({ data, location }) => {
   const isDarkMode = useSelector(selectIsDarkMode);
-  const isProduction = useSelector(selectIsProduction);
 
   const renderCopy = (data) => (
     <div className="text-center md:text-left text-md">
