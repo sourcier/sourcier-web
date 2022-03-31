@@ -32,7 +32,10 @@ const BlogPost = ({ data, location }) => {
   );
 
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <Layout
+      title={data.mdx.frontmatter.title}
+      description={data.mdx.frontmatter.description}
+    >
       <div className="max-w-6xl px-4 mx-auto my-8">
         <Breadcrumbs path={location.pathname} />
 
@@ -114,6 +117,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        description
         date(formatString: "MMMM D, YYYY")
         hero_image_alt
         hero_image_credit_link

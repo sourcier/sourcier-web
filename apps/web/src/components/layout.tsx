@@ -1,17 +1,18 @@
 import { useCallback, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import { Sidebar, Navbar, Footer } from '@sourcier/ui-components';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setIsDarkMode, selectIsDarkMode } from '../store/slices/configSlice';
+import { Seo } from './seo';
 
 interface LayoutProps {
-  pageTitle?: string;
+  title?: string;
+  description?: string;
   children: React.ReactNode;
 }
 
-const Layout = ({ pageTitle, children }: LayoutProps) => {
+const Layout = ({ title, description, children }: LayoutProps) => {
   const isDarkMode = useSelector(selectIsDarkMode);
   const dispatch = useDispatch();
 
@@ -75,9 +76,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
 
   return (
     <>
-      <Helmet>
-        <title>{pageTitle || data.site.siteMetadata.brand}</title>
-      </Helmet>
+      <Seo title={title} description={description} />
       <div className="w-full h-screen rounded drawer">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="flex flex-col drawer-content">

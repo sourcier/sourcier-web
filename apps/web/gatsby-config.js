@@ -1,6 +1,9 @@
 module.exports = {
   jsxRuntime: 'automatic',
   siteMetadata: {
+    title: 'sourcier.uk',
+    description: "Roger Rajaratnam's website about software development",
+    siteUrl: 'http://sourcier.uk',
     brand: `Sourcier`,
     nav: [
       { text: 'Blog', href: '/blog' },
