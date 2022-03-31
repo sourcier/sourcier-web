@@ -35,6 +35,7 @@ const BlogPost = ({ data, location }) => {
     <Layout
       title={data.mdx.frontmatter.title}
       description={data.mdx.frontmatter.description}
+      pathname={location.pathname}
     >
       <div className="max-w-6xl px-4 mx-auto my-8">
         <Breadcrumbs path={location.pathname} />
