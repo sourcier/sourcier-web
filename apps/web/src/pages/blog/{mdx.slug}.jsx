@@ -65,7 +65,7 @@ const BlogPost = ({ data, location }) => {
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </Prose>
 
-        <div class="divider"></div>
+        <div className="divider"></div>
 
         <Prose>
           <p>
