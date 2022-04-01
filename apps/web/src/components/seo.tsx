@@ -29,6 +29,7 @@ export const Seo = ({ description, lang = 'en', title, pathname, image }) => {
     `
   );
 
+  const isProduction = process.env.GATSBY_APP_ENV === 'main';
   const metaTitle = title || site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description;
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
@@ -36,6 +37,11 @@ export const Seo = ({ description, lang = 'en', title, pathname, image }) => {
   return (
     <Helmet htmlAttributes={{ lang }}>
       <title>{metaTitle}</title>
+      {isProduction ? (
+        <meta name="robots" content="all" />
+      ) : (
+        <meta name="robots" content="none" />
+      )}
       {canonical && <link rel="canonical" href={canonical} />}
       <meta name="description" content={metaDescription} />
       <meta name="og:title" content={metaTitle} />
