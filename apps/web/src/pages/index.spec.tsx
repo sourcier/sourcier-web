@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 
 import Index from './index';
 import { store } from '../store/store';
+import { allMdx } from './index.mock';
 
 const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
 useStaticQuery.mockImplementation(() => ({
@@ -28,7 +29,7 @@ describe('Index', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <Index />
+          <Index data={{ allMdx }} />
         </Provider>
       )
       .toJSON();

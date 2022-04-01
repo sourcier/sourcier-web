@@ -160,7 +160,7 @@ exports[`Index should render successfully 1`] = `
           </div>
         </div>
         <div
-          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary dark:prose-a:link-accent"
+          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary dark:prose-a:link-accent prose-headings:capitalize"
         >
           <p>
             I love making software that is memorable and truly joyful to use. My goal with this blog is to document and share the things I learn with every new project.
@@ -187,6 +187,98 @@ exports[`Index should render successfully 1`] = `
             </a>
             .
           </p>
+          <h2>
+            Recently Published
+          </h2>
+          <div
+            className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 not-prose"
+          >
+            <div
+              className="overflow-hidden rounded-lg shadow-xl card bg-base-100"
+            >
+              <div
+                className="relative"
+              >
+                <figure>
+                  <img
+                    src="/static/5d14b49519ecb02582700de05c9dc1e6/2d418/kirill-sharkovski-trbb1NeU4Jg-unsplash.jpg"
+                  />
+                </figure>
+                <div
+                  className="absolute top-2 right-2"
+                >
+                  <div
+                    className="badge badge-secondary"
+                  >
+                    <svg
+                      className="inline-block mr-1"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 16 16"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                      />
+                    </svg>
+                    1 minute read
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card-body"
+              >
+                <h2
+                  className="card-title"
+                >
+                  🚀 Initial Blog Post
+                </h2>
+                <p
+                  className="line-clamp-3"
+                >
+                  This is the first of many blog posts to come. I have been a developer since way back in 2005. I am currently building  React  and  NodeJs…
+                </p>
+                <div
+                  className="justify-center mt-4 card-actions"
+                >
+                  <a
+                    className="flex-1 btn btn-primary"
+                    href="/blog/initial-blog-post/"
+                  >
+                    Read More 
+                    <svg
+                      className="ml-3"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 16 16"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
