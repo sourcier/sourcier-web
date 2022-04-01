@@ -36,6 +36,7 @@ const BlogPost = ({ data, location }) => {
       title={data.mdx.frontmatter.title}
       description={data.mdx.frontmatter.description}
       pathname={location.pathname}
+      image={data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData}
     >
       <div className="max-w-6xl px-4 mx-auto my-8">
         <Breadcrumbs path={location.pathname} />

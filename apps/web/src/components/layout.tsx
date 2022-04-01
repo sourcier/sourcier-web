@@ -11,9 +11,20 @@ interface LayoutProps {
   description?: string;
   children: React.ReactNode;
   pathname?: string;
+  image?: {
+    height: number;
+    width: number;
+    images: { fallback: { src: string } };
+  };
 }
 
-const Layout = ({ title, description, children, pathname }: LayoutProps) => {
+const Layout = ({
+  title,
+  description,
+  children,
+  pathname,
+  image,
+}: LayoutProps) => {
   const isDarkMode = useSelector(selectIsDarkMode);
   const dispatch = useDispatch();
 
@@ -77,7 +88,12 @@ const Layout = ({ title, description, children, pathname }: LayoutProps) => {
 
   return (
     <>
-      <Seo title={title} description={description} pathname={pathname} />
+      <Seo
+        title={title}
+        description={description}
+        pathname={pathname}
+        image={image}
+      />
       <div className="w-full h-screen rounded drawer">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="flex flex-col drawer-content">

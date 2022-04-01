@@ -7,9 +7,14 @@ export interface SeoProps {
   description?: string;
   meta?: { name: string; content: string }[];
   lang?: string;
+  image?: {
+    height: number;
+    width: number;
+    images: { fallback: { src: string } };
+  };
 }
 
-export const Seo = ({ description, lang = 'en', title, pathname }) => {
+export const Seo = ({ description, lang = 'en', title, pathname, image }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -42,11 +47,19 @@ export const Seo = ({ description, lang = 'en', title, pathname }) => {
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:site" content="@sourcier" />
       <meta name="twitter:creator" content="@sourcier" />
-      <meta name="twitter:card" content="summary" />
-      {/* <meta name="twitter:card" content="summary_large_image" /> */}
-      {/* <meta name="og:image" content="" /> */}
-      {/* <meta name="og:image:width" content="" /> */}
-      {/* <meta name="og:image:height" content="" /> */}
+      {image ? (
+        <meta name="twitter:card" content="summary_large_image" />
+      ) : (
+        <meta name="twitter:card" content="summary" />
+      )}
+      {image && (
+        <meta
+          name="og:image"
+          content={`${site.siteMetadata.siteUrl}${image.images.fallback.src}`}
+        />
+      )}
+      {image && <meta name="og:image:width" content={image.width} />}
+      {image && <meta name="og:image:height" content={image.height} />}
     </Helmet>
   );
 };
