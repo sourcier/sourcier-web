@@ -3,9 +3,9 @@ import renderer from 'react-test-renderer';
 import * as Gatsby from 'gatsby';
 import { Provider } from 'react-redux';
 
-import HomePage from './index';
-import { store } from '../store/store';
-import { allMdx } from './index.mock';
+import BlogListPage from './{mdx.slug}';
+import { store } from '../../store/store';
+import { mdx } from './{mdx.slug}.mock';
 
 const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
 useStaticQuery.mockImplementation(() => ({
@@ -20,16 +20,27 @@ useStaticQuery.mockImplementation(() => ({
   },
 }));
 
+jest.mock('gatsby-plugin-mdx', () => {
+  return {
+    MDXRenderer: ({ children }) => {
+      return <div>{children}</div>;
+    },
+  };
+});
+
 beforeEach(() => {
   jest.clearAllMocks();
 });
 
-describe('Homepage', () => {
+describe('BlogListPage', () => {
   it('should render successfully', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <HomePage data={{ allMdx }} location={{ pathname: '/' }} />
+          <BlogListPage
+            location={{ pathname: '/blog/initial-blog-post' }}
+            data={{ mdx }}
+          />
         </Provider>
       )
       .toJSON();

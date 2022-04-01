@@ -8,13 +8,19 @@ export interface SeoProps {
   meta?: { name: string; content: string }[];
   lang?: string;
   image?: {
-    height: number;
-    width: number;
+    height: string;
+    width: string;
     images: { fallback: { src: string } };
   };
 }
 
-export const Seo = ({ description, lang = 'en', title, pathname, image }) => {
+export const Seo = ({
+  description,
+  lang = 'en',
+  title,
+  pathname,
+  image,
+}: SeoProps) => {
   const { site } = useStaticQuery(
     graphql`
       query {

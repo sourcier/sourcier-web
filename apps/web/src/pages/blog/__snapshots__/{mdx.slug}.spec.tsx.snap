@@ -1,0 +1,532 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogListPage should render successfully 1`] = `
+<div
+  className="w-full h-screen rounded drawer"
+>
+  <input
+    className="drawer-toggle"
+    id="my-drawer"
+    type="checkbox"
+  />
+  <div
+    className="flex flex-col drawer-content"
+  >
+    <div
+      className="navbar bg-base-200"
+    >
+      <div
+        className="navbar-start"
+      >
+        <label
+          className="btn btn-ghost drawer-button"
+          htmlFor="my-drawer"
+        >
+          <svg
+            className="inline-block w-4 h-4"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z"
+              fill="currentColor"
+            />
+            <path
+              d="M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z"
+              fill="currentColor"
+            />
+            <path
+              d="M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z"
+              fill="currentColor"
+            />
+          </svg>
+        </label>
+        <a
+          className="text-xl normal-case btn btn-ghost"
+          data-testid="site-brand"
+          href="/"
+        />
+      </div>
+      <div
+        className="navbar-end"
+      >
+        <ul
+          className="hidden p-0 menu menu-horizontal sm:inline-flex"
+        >
+          <li>
+            <a
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/blog"
+            >
+              Blog
+            </a>
+          </li>
+        </ul>
+        <button
+          className="btn btn-ghost swap swap-rotate"
+          onClick={[Function]}
+        >
+          <svg
+            className="inline-block w-4 h-4 swap-on"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+            />
+          </svg>
+          <svg
+            className="inline-block w-4 h-4 swap-off"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      className="flex-1"
+    >
+      <div
+        className="max-w-6xl px-4 mx-auto my-8"
+      >
+        <div
+          className="text-lg breadcrumbs"
+        >
+          <ul>
+            <li>
+              <a
+                className="capitalize"
+                href="/blog"
+              >
+                <svg
+                  className="mr-2"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.5 3H7.71l-.85-.85L6.51 2h-5l-.5.5v11l.5.5h13l.5-.5v-10L14.5 3zm-.51 8.49V13h-12V7h4.49l.35-.15.86-.86H14v1.5l-.01 4zm0-6.49h-6.5l-.35.15-.86.86H2v-3h4.29l.85.85.36.15H14l-.01.99z"
+                  />
+                </svg>
+                blog
+              </a>
+            </li>
+            <li>
+              <a
+                className="capitalize"
+                href="/blog/initial-blog-post"
+              >
+                <svg
+                  className="mr-2"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M13.71 4.29l-3-3L10 1H4L3 2v12l1 1h9l1-1V5l-.29-.71zM13 14H4V2h5v4h4v8zm-3-9V2l3 3h-3z"
+                    fillRule="evenodd"
+                  />
+                </svg>
+                initial blog post
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          className="min-h-[25vh] hero rounded-lg my-8 bg-gradient-to-t from-base-200 to-base-100 p-4 shadow-sm hidden md:block"
+        >
+          <div
+            className="flex-row-reverse hero-content"
+          >
+            <img
+              alt="Red and white OPEN led lights"
+              className="max-w-sm rounded-lg shadow-2xl lg:max-w-xl"
+              src="/static/5d14b49519ecb02582700de05c9dc1e6/2d418/kirill-sharkovski-trbb1NeU4Jg-unsplash.jpg"
+            />
+            <div
+              className="flex-1"
+            >
+              <div>
+                <h1
+                  className="mb-3 text-5xl font-bold md:mb-5"
+                >
+                  🚀 Initial Blog Post
+                </h1>
+                <div
+                  className="text-center md:text-left text-md"
+                >
+                  <p>
+                    <svg
+                      className="inline-block mr-2"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 16 16"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zm9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5zM11.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"
+                      />
+                    </svg>
+                    March 30, 2022
+                  </p>
+                  <p>
+                    <svg
+                      className="inline-block mr-2"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 16 16"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                      />
+                    </svg>
+                    1 minute read
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="min-h-[35vh] hero rounded-lg overflow-hidden my-8 md:hidden"
+          style={
+            Object {
+              "backgroundImage": "url(/static/5d14b49519ecb02582700de05c9dc1e6/2d418/kirill-sharkovski-trbb1NeU4Jg-unsplash.jpg)",
+            }
+          }
+        >
+          <div
+            className="hero-overlay bg-opacity-60"
+          />
+          <div
+            className="text-center hero-content text-primary-content"
+          >
+            <div
+              className="max-w-md"
+            >
+              <h1
+                className="mb-4 text-5xl font-bold"
+              >
+                🚀 Initial Blog Post
+              </h1>
+              <div
+                className="text-center md:text-left text-md"
+              >
+                <p>
+                  <svg
+                    className="inline-block mr-2"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    strokeWidth="0"
+                    style={
+                      Object {
+                        "color": undefined,
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zm9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5zM11.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"
+                    />
+                  </svg>
+                  March 30, 2022
+                </p>
+                <p>
+                  <svg
+                    className="inline-block mr-2"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    strokeWidth="0"
+                    style={
+                      Object {
+                        "color": undefined,
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                    />
+                  </svg>
+                  1 minute read
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary dark:prose-a:link-accent prose-headings:capitalize"
+        >
+          <div>
+            var _excluded = ["components"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsxRuntime classic */
+
+/* @jsx mdx */
+var _frontmatter = {
+  "title": "🚀 Initial Blog Post",
+  "description": "Roger Raajaratnam's initial blog post outlining goals for the website",
+  "date": "2022-03-30T00:00:00.000Z",
+  "hero_image": "./kirill-sharkovski-trbb1NeU4Jg-unsplash.jpg",
+  "hero_image_alt": "Red and white OPEN led lights",
+  "hero_image_credit_text": "Kirill Sharkovski",
+  "hero_image_credit_link": "https://unsplash.com/photos/trbb1NeU4Jg"
+};
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = "wrapper";
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: "MDXLayout"
+  }), mdx("p", null, "This is the first of many blog posts to come. I have been a developer since way back in 2005. I am currently building ", mdx("strong", {
+    parentName: "p"
+  }, "React"), " and ", mdx("strong", {
+    parentName: "p"
+  }, "NodeJs"), " based applications and it's time for me to start my blog. If anyone learns something from this \\u2014 about software development, I'll consider it a huge success."), mdx("h2", null, "Goals"), mdx("h3", null, "Contribute to the Community"), mdx("p", null, "I'd like to participate more in software development\\u2019s wide and wonderful community! I'd like to have a more interesting and meaningful impact by sharing my knowledge and experience, and that's a big part of why I want to start writing."), mdx("h3", null, "Share My Experience"), mdx("p", null, "I am always learning and I've learned so much in the last 17 years \\uD83D\\uDE31. How much of it do you think I've written down? Not nearly enough!"), mdx("p", null, "I love teaching and talking about software development. I've done a fair amount of both and I have found that it is a great way to solidify an understanding of a topic."), mdx("p", null, "By sharing the problems I have faced and their solutions as well as creating new projects and writing about the process. I hope to be helpful to other developers."));
+}
+;
+MDXContent.isMDXComponent = true;
+          </div>
+        </div>
+        <div
+          className="divider"
+        />
+        <div
+          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary dark:prose-a:link-accent prose-headings:capitalize"
+        >
+          <p>
+            Written by Roger Rajaratnam, a London based software engineer working on building delightful digital experiences. Want to get in touch? Reach out on
+             
+            <a
+              href="https://twitter.com/sourcier"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Twitter
+            </a>
+             
+            or by
+             
+            <a
+              href="mailto:roger@sourcier.uk"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              email
+            </a>
+            .
+          </p>
+        </div>
+        <div
+          className="mt-16"
+        >
+          <h2
+            className="my-8 text-2xl text-center"
+          >
+            Did you find this article helpful?
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bg-base-200 text-base-content"
+    >
+      <div
+        className="max-w-6xl px-4 mx-auto my-16"
+      >
+        <div
+          className="flex flex-col text-center md:flex-row md:text-left"
+        >
+          <div
+            className="mb-8 md:mb-0"
+          >
+            <p>
+              Made with
+               
+              <span
+                aria-label="Heart emoji"
+                role="img"
+              >
+                ❤️
+              </span>
+               
+              in London, UK.
+            </p>
+            <p>
+              Copyright © 2022 All rights reserved by Sourcier Ltd.
+            </p>
+          </div>
+          <div
+            className="md:ml-auto md:text-right"
+          >
+            <p>
+              Projects on
+               
+              <a
+                className="underline link-accent"
+                href="https://github.com/sourcier"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
+            </p>
+            <p>
+              Follow on
+               
+              <a
+                className="underline link-accent"
+                href="https://twitter.com/sourcier"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Twitter
+              </a>
+            </p>
+            <p>
+              Contact via
+               
+              <a
+                className="underline link-accent"
+                href="mailto:roger@sourcier.uk"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Email
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="drawer-side"
+  >
+    <label
+      className="drawer-overlay"
+      htmlFor="my-drawer"
+    />
+    <aside
+      className="w-80 bg-base-200"
+    >
+      <ul
+        className="p-4 overflow-y-auto menu text-base-content"
+      >
+        <li>
+          <a
+            href="/"
+          />
+        </li>
+        <li>
+          <a
+            href="/about"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="/blog"
+          >
+            Blog
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</div>
+`;

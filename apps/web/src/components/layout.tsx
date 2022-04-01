@@ -4,27 +4,12 @@ import { Sidebar, Navbar, Footer } from '@sourcier/ui-components';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setIsDarkMode, selectIsDarkMode } from '../store/slices/configSlice';
-import { Seo } from './seo';
 
 interface LayoutProps {
-  title?: string;
-  description?: string;
   children: React.ReactNode;
-  pathname?: string;
-  image?: {
-    height: number;
-    width: number;
-    images: { fallback: { src: string } };
-  };
 }
 
-const Layout = ({
-  title,
-  description,
-  children,
-  pathname,
-  image,
-}: LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   const isDarkMode = useSelector(selectIsDarkMode);
   const dispatch = useDispatch();
 
@@ -87,31 +72,23 @@ const Layout = ({
   }, [dispatch, setTheme]);
 
   return (
-    <>
-      <Seo
-        title={title}
-        description={description}
-        pathname={pathname}
-        image={image}
-      />
-      <div className="w-full h-screen rounded drawer">
-        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="flex flex-col drawer-content">
-          <Navbar
-            brand={data.site.siteMetadata.brand}
-            nav={data.site.siteMetadata.nav}
-            toggleDarkMode={toggleDarkMode}
-            isDarkMode={isDarkMode}
-          />
-          <div className="flex-1">{children}</div>
-          <Footer />
-        </div>
-        <Sidebar
+    <div className="w-full h-screen rounded drawer">
+      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+      <div className="flex flex-col drawer-content">
+        <Navbar
           brand={data.site.siteMetadata.brand}
           nav={data.site.siteMetadata.nav}
+          toggleDarkMode={toggleDarkMode}
+          isDarkMode={isDarkMode}
         />
+        <div className="flex-1">{children}</div>
+        <Footer />
       </div>
-    </>
+      <Sidebar
+        brand={data.site.siteMetadata.brand}
+        nav={data.site.siteMetadata.nav}
+      />
+    </div>
   );
 };
 

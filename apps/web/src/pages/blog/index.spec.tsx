@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import * as Gatsby from 'gatsby';
 import { Provider } from 'react-redux';
 
-import HomePage from './index';
-import { store } from '../store/store';
+import BlogHomePage from './index';
+import { store } from '../../store/store';
 import { allMdx } from './index.mock';
 
 const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
@@ -24,12 +24,12 @@ beforeEach(() => {
   jest.clearAllMocks();
 });
 
-describe('Homepage', () => {
+describe('BlogHomePage', () => {
   it('should render successfully', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <HomePage data={{ allMdx }} location={{ pathname: '/' }} />
+          <BlogHomePage location={{ pathname: '/blog' }} data={{ allMdx }} />
         </Provider>
       )
       .toJSON();

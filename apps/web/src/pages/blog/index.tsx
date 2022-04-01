@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { BsClockFill } from 'react-icons/bs';
 
 import Layout from '../../components/layout';
+import { Seo } from '../../components/seo';
 
 const BlogPage = ({ data, location }) => {
   const renderPills = (node) => (
@@ -15,31 +16,34 @@ const BlogPage = ({ data, location }) => {
   );
 
   return (
-    <Layout pageTitle="My Blog Posts">
-      <div className="max-w-6xl px-4 mx-auto my-8">
-        <div className="my-8">
-          <Breadcrumbs path={location.pathname} leafAsFolder />
+    <>
+      <Seo pathname={location.pathname} />
+      <Layout>
+        <div className="max-w-6xl px-4 mx-auto my-8">
+          <div className="my-8">
+            <Breadcrumbs path={location.pathname} leafAsFolder />
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {data.allMdx.nodes.map((node) => {
+              return (
+                <Card
+                  key={node.id}
+                  href={`/blog/${node.slug}`}
+                  heading={node.frontmatter.title}
+                  imgSrc={
+                    node.frontmatter.hero_image.childImageSharp.gatsbyImageData
+                      .images.fallback.src
+                  }
+                  imgAlt={node.frontmatter.hero_image.alt}
+                  copy={node.excerpt}
+                  pills={renderPills(node)}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {data.allMdx.nodes.map((node) => {
-            return (
-              <Card
-                key={node.id}
-                href={`/blog/${node.slug}`}
-                heading={node.frontmatter.title}
-                imgSrc={
-                  node.frontmatter.hero_image.childImageSharp.gatsbyImageData
-                    .images.fallback.src
-                }
-                imgAlt={node.frontmatter.hero_image.alt}
-                copy={node.excerpt}
-                pills={renderPills(node)}
-              />
-            );
-          })}
-        </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

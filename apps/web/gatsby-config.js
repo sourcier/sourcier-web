@@ -62,5 +62,12 @@ module.exports = {
         name: 'blog',
       },
     },
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: `${__dirname}/src/pages`,
+        ignore: ['**/*.mock.(js|ts)?(x)'],
+      },
+    },
   ],
 };
