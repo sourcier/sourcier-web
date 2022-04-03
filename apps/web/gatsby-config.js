@@ -3,7 +3,12 @@ module.exports = {
   siteMetadata: {
     title: 'sourcier.uk',
     description: "Roger Rajaratnam's website about software development",
-    siteUrl: 'http://sourcier.uk',
+    siteUrl:
+      process.env.GATSBY_APP_ENV === 'main'
+        ? 'http://sourcier.uk'
+        : process.env.GATSBY_APP_ENV === 'develop'
+        ? 'http://develop.sourcier.uk'
+        : 'http://localhost:4200',
     brand: `Sourcier`,
     nav: [
       { text: 'Blog', href: '/blog' },
