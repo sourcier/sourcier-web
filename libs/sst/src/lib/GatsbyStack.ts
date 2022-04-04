@@ -33,7 +33,7 @@ export default class GatsbyStack extends sst.Stack {
       customDomain: {
         isExternalDomain: true,
         domainName: isProduction ? 'sourcier.uk' : `${scope.stage}.sourcier.uk`,
-        domainAlias: isProduction ? 'www.sourcier.uk' : undefined,
+        // domainAlias: isProduction ? 'www.sourcier.uk' : undefined,
         certificate: Certificate.fromCertificateArn(
           this,
           'SourcierUkCert',
