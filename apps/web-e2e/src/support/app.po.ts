@@ -1,1 +1,1 @@
-export const getGreeting = () => cy.get('[data-testid="site-brand"]');
+export const getGreeting = () => cy.get('[data-testid="site-logo"]');
