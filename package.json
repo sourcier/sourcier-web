@@ -1,6 +1,6 @@
 {
   "name": "sourcier",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "resolutions": {
     "postcss": "^8.4.6"
