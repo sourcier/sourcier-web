@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-
 export interface SeoProps {
   pathname: string;
   title?: string;
@@ -39,6 +38,11 @@ export const Seo = ({
   const metaTitle = title || site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description;
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
+  const metaImage = image
+    ? image.images.fallback.src
+    : `${site.siteMetadata.siteUrl}/images/icon.svg`;
+  const metaImageWidth = image ? image.width : '512';
+  const metaImageHeight = image ? image.height : '512';
 
   return (
     <Helmet htmlAttributes={{ lang }}>
@@ -59,19 +63,10 @@ export const Seo = ({
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:site" content="@sourcier" />
       <meta name="twitter:creator" content="@sourcier" />
-      {image ? (
-        <meta name="twitter:card" content="summary_large_image" />
-      ) : (
-        <meta name="twitter:card" content="summary" />
-      )}
-      {image && (
-        <meta
-          name="og:image"
-          content={`${site.siteMetadata.siteUrl}${image.images.fallback.src}`}
-        />
-      )}
-      {image && <meta name="og:image:width" content={image.width} />}
-      {image && <meta name="og:image:height" content={image.height} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="og:image" content={`${metaImage}`} />
+      <meta name="og:image:width" content={metaImageWidth} />
+      <meta name="og:image:height" content={metaImageHeight} />
     </Helmet>
   );
 };
