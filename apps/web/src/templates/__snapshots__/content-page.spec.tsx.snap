@@ -279,9 +279,7 @@ MDXContent.isMDXComponent = true;
                
               <a
                 className="underline link-accent"
-                href="mailto:roger@sourcier.uk"
-                rel="noopener noreferrer"
-                target="_blank"
+                href="mailto:hello@sourcier.uk"
               >
                 Email
               </a>

@@ -83,15 +83,7 @@ const BlogPost = ({ data, location }) => {
               >
                 Twitter
               </a>{' '}
-              or by{' '}
-              <a
-                href="mailto:roger@sourcier.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                email
-              </a>
-              .
+              or by <a href="mailto:hello@sourcier.uk">email</a>.
             </p>
           </Prose>
 

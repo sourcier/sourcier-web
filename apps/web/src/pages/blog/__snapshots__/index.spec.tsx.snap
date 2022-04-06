@@ -336,9 +336,7 @@ exports[`BlogHomePage should render successfully 1`] = `
                
               <a
                 className="underline link-accent"
-                href="mailto:roger@sourcier.uk"
-                rel="noopener noreferrer"
-                target="_blank"
+                href="mailto:hello@sourcier.uk"
               >
                 Email
               </a>

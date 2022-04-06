@@ -417,12 +417,9 @@ MDXContent.isMDXComponent = true;
               Twitter
             </a>
              
-            or by
-             
+            or by 
             <a
-              href="mailto:roger@sourcier.uk"
-              rel="noopener noreferrer"
-              target="_blank"
+              href="mailto:hello@sourcier.uk"
             >
               email
             </a>
@@ -500,9 +497,7 @@ MDXContent.isMDXComponent = true;
                
               <a
                 className="underline link-accent"
-                href="mailto:roger@sourcier.uk"
-                rel="noopener noreferrer"
-                target="_blank"
+                href="mailto:hello@sourcier.uk"
               >
                 Email
               </a>

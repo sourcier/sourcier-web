@@ -39,9 +39,7 @@ export function Footer() {
             <p>
               Contact via{' '}
               <a
-                href="mailto:roger@sourcier.uk"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:hello@sourcier.uk"
                 className="underline link-accent"
               >
                 Email
