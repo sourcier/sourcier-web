@@ -356,7 +356,7 @@ exports[`BlogListPage should render successfully 1`] = `
           </div>
         </div>
         <div
-          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary dark:prose-a:link-accent prose-headings:capitalize"
+          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary prose-a:link-hover dark:prose-a:link-accent prose-headings:capitalize"
         >
           <div>
             var _excluded = ["components"];
@@ -404,7 +404,7 @@ MDXContent.isMDXComponent = true;
           className="divider"
         />
         <div
-          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary dark:prose-a:link-accent prose-headings:capitalize"
+          className="my-8 prose prose-lg max-w-none dark:prose-invert prose-img:rounded-lg prose-a:link-primary prose-a:link-hover dark:prose-a:link-accent prose-headings:capitalize"
         >
           <p>
             Written by Roger Rajaratnam, a London based software engineer working on building delightful digital experiences. Want to get in touch? Reach out on
