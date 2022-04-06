@@ -3,9 +3,9 @@ import renderer from 'react-test-renderer';
 import * as Gatsby from 'gatsby';
 import { Provider } from 'react-redux';
 
-import BlogListPage from './{mdx.slug}';
-import { store } from '../../store/store';
-import { mdx } from './{mdx.slug}.mock';
+import BlogListPage from './blog-page';
+import { store } from '../store/store';
+import { mdx } from './blog-page.mock';
 
 const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
 useStaticQuery.mockImplementation(() => ({

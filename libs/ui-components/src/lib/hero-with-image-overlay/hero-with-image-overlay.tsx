@@ -3,7 +3,7 @@ import clsx from 'clsx';
 export interface HeroWithImageOverlayProps {
   imageUrl: string;
   heading: string;
-  copy: string;
+  copy: string | React.ReactNode;
   className?: string;
 }
 

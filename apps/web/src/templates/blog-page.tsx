@@ -10,9 +10,9 @@ import {
   Prose,
 } from '@sourcier/ui-components';
 
-import Layout from '../../components/layout';
-import { selectIsDarkMode } from '../../store/slices/configSlice';
-import { Seo } from '../../components/seo';
+import Layout from '../components/layout';
+import { selectIsDarkMode } from '../store/slices/configSlice';
+import { Seo } from '../components/seo';
 
 const BlogPost = ({ data, location }) => {
   const isDarkMode = useSelector(selectIsDarkMode);
