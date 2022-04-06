@@ -12,7 +12,7 @@ module.exports = {
     brand: `Sourcier`,
     nav: [
       { text: 'Blog', href: '/blog' },
-      { text: 'Contact', href: '/contact' },
+      { text: 'Contact', href: '/contact-us' },
     ],
   },
   plugins: [

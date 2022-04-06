@@ -8,7 +8,7 @@ exports[`HeroCentered should render successfully 1`] = `
     className="text-center hero-content"
   >
     <div
-      className="max-w-md"
+      className="max-w-md lg:max-w-full"
     >
       <h1
         className="text-6xl font-bold"

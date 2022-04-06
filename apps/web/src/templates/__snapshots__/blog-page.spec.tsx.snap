@@ -507,6 +507,30 @@ MDXContent.isMDXComponent = true;
                 Email
               </a>
             </p>
+            <p>
+              <a
+                className="underline link-accent"
+                href="/cookie-policy"
+              >
+                Cookie Policy
+              </a>
+            </p>
+            <p>
+              <a
+                className="underline link-accent"
+                href="/cookie-policy"
+              >
+                Privacy Policy
+              </a>
+            </p>
+            <p>
+              <a
+                className="underline link-accent"
+                href="/terms-and-conditions"
+              >
+                Terms & Conditions
+              </a>
+            </p>
           </div>
         </div>
       </div>

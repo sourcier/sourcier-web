@@ -47,6 +47,21 @@ export function Footer() {
                 Email
               </a>
             </p>
+            <p>
+              <a href="/cookie-policy" className="underline link-accent">
+                Cookie Policy
+              </a>
+            </p>
+            <p>
+              <a href="/cookie-policy" className="underline link-accent">
+                Privacy Policy
+              </a>
+            </p>
+            <p>
+              <a href="/terms-and-conditions" className="underline link-accent">
+                Terms &amp; Conditions
+              </a>
+            </p>
           </div>
         </div>
       </div>

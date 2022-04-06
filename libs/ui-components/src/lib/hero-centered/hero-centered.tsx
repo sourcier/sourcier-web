@@ -18,7 +18,7 @@ export function HeroCentered({ heading, copy, fullHeight = false }: HeroProps) {
       )}
     >
       <div className="text-center hero-content">
-        <div className="max-w-md">
+        <div className="max-w-md lg:max-w-full">
           <h1 className="text-6xl font-bold">{heading}</h1>
           {copy}
         </div>

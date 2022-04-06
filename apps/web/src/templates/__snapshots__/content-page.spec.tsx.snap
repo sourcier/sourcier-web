@@ -155,7 +155,7 @@ exports[`ContactPage should render successfully 1`] = `
             className="text-center hero-content"
           >
             <div
-              className="max-w-md"
+              className="max-w-md lg:max-w-full"
             >
               <h1
                 className="text-6xl font-bold"
@@ -284,6 +284,30 @@ MDXContent.isMDXComponent = true;
                 target="_blank"
               >
                 Email
+              </a>
+            </p>
+            <p>
+              <a
+                className="underline link-accent"
+                href="/cookie-policy"
+              >
+                Cookie Policy
+              </a>
+            </p>
+            <p>
+              <a
+                className="underline link-accent"
+                href="/cookie-policy"
+              >
+                Privacy Policy
+              </a>
+            </p>
+            <p>
+              <a
+                className="underline link-accent"
+                href="/terms-and-conditions"
+              >
+                Terms & Conditions
               </a>
             </p>
           </div>
