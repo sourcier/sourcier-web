@@ -1,10 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import * as Gatsby from 'gatsby';
 import { Provider } from 'react-redux';
+import * as Gatsby from 'gatsby';
 
-import ContactPage from './contact';
+import ContentPage from './content-page';
 import { store } from '../store/store';
+import { data } from './content-page.mock';
 
 const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
 useStaticQuery.mockImplementation(() => ({
@@ -19,6 +20,14 @@ useStaticQuery.mockImplementation(() => ({
   },
 }));
 
+jest.mock('gatsby-plugin-mdx', () => {
+  return {
+    MDXRenderer: ({ children }) => {
+      return <div>{children}</div>;
+    },
+  };
+});
+
 beforeEach(() => {
   jest.clearAllMocks();
 });
@@ -28,7 +37,7 @@ describe('ContactPage', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <ContactPage location={{ pathname: '/contact' }} />
+          <ContentPage location={{ pathname: '/contact' }} data={data} />
         </Provider>
       )
       .toJSON();

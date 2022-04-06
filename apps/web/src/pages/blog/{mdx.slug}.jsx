@@ -35,8 +35,8 @@ const BlogPost = ({ data, location }) => {
   return (
     <>
       <Seo
-        title={data.mdx.frontmatter.title}
-        description={data.mdx.frontmatter.description}
+        title={data.mdx.frontmatter.meta_title}
+        description={data.mdx.frontmatter.meta_description}
         pathname={location.pathname}
         image={data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData}
       />
@@ -123,7 +123,8 @@ export const query = graphql`
     mdx(slug: { eq: $slug }) {
       frontmatter {
         title
-        description
+        meta_title
+        meta_description
         date(formatString: "MMMM D, YYYY")
         hero_image_alt
         hero_image_credit_link
