@@ -434,6 +434,16 @@ MDXContent.isMDXComponent = true;
           >
             Did you find this article helpful?
           </h2>
+          <div
+            className="giscus"
+          >
+            <iframe
+              className="giscus-frame"
+              scrolling="no"
+              src="https://giscus.app/en/widget?origin=http%3A%2F%2Flocalhost%2F&session=&theme=light&reactionsEnabled=1&emitMetadata=0&inputPosition=top&repo=sourcier%2Fsourcier-web&repoId=R_kgDOG0xBpA&category=Comments&categoryId=DIC_kwDOG0xBpM4COQ0_&description=&term=index"
+              title="Comments"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -590,6 +600,56 @@ MDXContent.isMDXComponent = true;
         </p>
       </div>
     </footer>
+    <div
+      className="alert alert-info shadow-lg fixed -translate-x-1/2 left-1/2 max-w-[95vw] mb-2 md:mb-4"
+      style={
+        Object {
+          "bottom": "0",
+        }
+      }
+    >
+      <div
+        className=""
+        style={Object {}}
+      >
+        <p>
+          <strong>
+            We value your privacy
+          </strong>
+          <br />
+          We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+           
+          <a
+            className="link link-hover"
+            href="/cookie-policy"
+          >
+            Read More
+          </a>
+        </p>
+      </div>
+      <div
+        className="flex-none"
+      >
+        <button
+          aria-label="Decline cookies"
+          className="btn btn-sm btn-ghost"
+          id="rcc-decline-button"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Reject All
+        </button>
+        <button
+          aria-label="Accept cookies"
+          className="btn btn-sm btn-primary"
+          id="rcc-confirm-button"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Accept All
+        </button>
+      </div>
+    </div>
   </div>
   <div
     className="drawer-side"

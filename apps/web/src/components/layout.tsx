@@ -2,6 +2,8 @@ import { useCallback, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Sidebar, Navbar, Footer } from '@sourcier/ui-components';
 import { useDispatch, useSelector } from 'react-redux';
+import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
+import { Helmet } from 'react-helmet';
 
 import { setIsDarkMode, selectIsDarkMode } from '../store/slices/configSlice';
 
@@ -12,6 +14,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   const isDarkMode = useSelector(selectIsDarkMode);
   const dispatch = useDispatch();
+  const hasCookieConsent = getCookieConsentValue();
 
   const data = useStaticQuery(graphql`
     query {
@@ -83,11 +86,49 @@ const Layout = ({ children }: LayoutProps) => {
         />
         <div className="flex-1">{children}</div>
         <Footer />
+        <CookieConsent
+          enableDeclineButton
+          disableStyles
+          buttonText="Accept All"
+          declineButtonText="Reject All"
+          containerClasses="alert alert-info shadow-lg fixed -translate-x-1/2 left-1/2 max-w-[95vw] mb-2 md:mb-4"
+          buttonClasses="btn btn-sm btn-primary"
+          buttonWrapperClasses="flex-none"
+          declineButtonClasses="btn btn-sm btn-ghost"
+          acceptOnScroll={true}
+        >
+          <p>
+            <strong>We value your privacy</strong>
+            <br />
+            We use cookies to enhance your browsing experience and analyze our
+            traffic. By clicking "Accept All", you consent to our use of
+            cookies.{' '}
+            <a href="/cookie-policy" className="link link-hover">
+              Read More
+            </a>
+          </p>
+        </CookieConsent>
       </div>
       <Sidebar
         brand={data.site.siteMetadata.brand}
         nav={data.site.siteMetadata.nav}
       />
+      {hasCookieConsent === 'true' && process.env.GATSBY_APP_GA && (
+        <Helmet>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GATSBY_APP_GA}`}
+          ></script>
+          <script>
+            {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.GATSBY_APP_GA}');
+            `}
+          </script>
+        </Helmet>
+      )}
     </div>
   );
 };
