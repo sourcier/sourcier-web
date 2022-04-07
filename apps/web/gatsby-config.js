@@ -88,7 +88,6 @@ module.exports = {
           trackingId: process.env.GATSBY_APP_GA,
           cookieName: 'CookieConsent',
         },
-        environments: ['production', 'development'],
       },
     },
   ],

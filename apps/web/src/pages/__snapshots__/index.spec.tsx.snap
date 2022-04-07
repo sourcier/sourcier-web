@@ -468,7 +468,7 @@ exports[`Homepage should render successfully 1`] = `
             We value your privacy
           </strong>
           <br />
-          We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+          We use cookies to enhance your browsing experience, serve personalized content and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
            
           <a
             className="link link-hover"

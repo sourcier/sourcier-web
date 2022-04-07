@@ -97,16 +97,16 @@ const Layout = ({ children }: LayoutProps) => {
           buttonWrapperClasses="flex-none"
           declineButtonClasses="btn btn-sm btn-ghost"
           acceptOnScroll={true}
-          onAccept={(byScroll) => {
+          onAccept={() => {
             initializeAndTrack(location);
           }}
         >
           <p>
             <strong>We value your privacy</strong>
             <br />
-            We use cookies to enhance your browsing experience and analyze our
-            traffic. By clicking "Accept All", you consent to our use of
-            cookies.{' '}
+            We use cookies to enhance your browsing experience, serve
+            personalized content and analyze our traffic. By clicking "Accept
+            All", you consent to our use of cookies.{' '}
             <a href="/cookie-policy" className="link link-hover">
               Read More
             </a>
@@ -117,22 +117,6 @@ const Layout = ({ children }: LayoutProps) => {
         brand={data.site.siteMetadata.brand}
         nav={data.site.siteMetadata.nav}
       />
-      {/* {hasCookieConsent === 'true' && process.env.GATSBY_APP_GA && (
-        <Helmet>
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GATSBY_APP_GA}`}
-          ></script>
-          <script>
-            {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.GATSBY_APP_GA}');
-            `}
-          </script>
-        </Helmet>
-      )} */}
     </div>
   );
 };
