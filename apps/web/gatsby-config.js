@@ -81,5 +81,15 @@ module.exports = {
         ignore: ['**/*.mock.(js|ts)?(x)'],
       },
     },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: process.env.GATSBY_APP_GA,
+          cookieName: 'CookieConsent',
+        },
+        environments: ['production', 'development'],
+      },
+    },
   ],
 };

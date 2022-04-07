@@ -28,6 +28,10 @@ jest.mock('gatsby-plugin-mdx', () => {
   };
 });
 
+jest.mock('@reach/router', () => ({
+  useLocation: jest.fn(),
+}));
+
 beforeEach(() => {
   jest.clearAllMocks();
 });

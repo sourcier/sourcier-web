@@ -2,8 +2,9 @@ import { useCallback, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Sidebar, Navbar, Footer } from '@sourcier/ui-components';
 import { useDispatch, useSelector } from 'react-redux';
-import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
-import { Helmet } from 'react-helmet';
+import CookieConsent from 'react-cookie-consent';
+import { useLocation } from '@reach/router'; // this helps tracking the location
+import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies';
 
 import { setIsDarkMode, selectIsDarkMode } from '../store/slices/configSlice';
 
@@ -14,7 +15,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   const isDarkMode = useSelector(selectIsDarkMode);
   const dispatch = useDispatch();
-  const hasCookieConsent = getCookieConsentValue();
+  const location = useLocation();
 
   const data = useStaticQuery(graphql`
     query {
@@ -96,6 +97,9 @@ const Layout = ({ children }: LayoutProps) => {
           buttonWrapperClasses="flex-none"
           declineButtonClasses="btn btn-sm btn-ghost"
           acceptOnScroll={true}
+          onAccept={(byScroll) => {
+            initializeAndTrack(location);
+          }}
         >
           <p>
             <strong>We value your privacy</strong>
@@ -113,7 +117,7 @@ const Layout = ({ children }: LayoutProps) => {
         brand={data.site.siteMetadata.brand}
         nav={data.site.siteMetadata.nav}
       />
-      {hasCookieConsent === 'true' && process.env.GATSBY_APP_GA && (
+      {/* {hasCookieConsent === 'true' && process.env.GATSBY_APP_GA && (
         <Helmet>
           <script
             async
@@ -128,7 +132,7 @@ const Layout = ({ children }: LayoutProps) => {
             `}
           </script>
         </Helmet>
-      )}
+      )} */}
     </div>
   );
 };

@@ -20,6 +20,10 @@ useStaticQuery.mockImplementation(() => ({
   },
 }));
 
+jest.mock('@reach/router', () => ({
+  useLocation: jest.fn(),
+}));
+
 beforeEach(() => {
   jest.clearAllMocks();
 });
