@@ -251,7 +251,7 @@ MDXContent.isMDXComponent = true;
         <span
           className="footer-title"
         >
-          Services
+          Company
         </span>
         <a
           className="link link-hover"

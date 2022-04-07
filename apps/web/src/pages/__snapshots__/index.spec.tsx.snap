@@ -330,7 +330,7 @@ exports[`Homepage should render successfully 1`] = `
         <span
           className="footer-title"
         >
-          Services
+          Company
         </span>
         <a
           className="link link-hover"

@@ -24,7 +24,7 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <span className="footer-title">Services</span>
+          <span className="footer-title">Company</span>
           <a href="/blog" className="link link-hover">
             Blog
           </a>
