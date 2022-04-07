@@ -59,7 +59,7 @@ export function Footer() {
           <p>
             Connect on{' '}
             <a
-              href="https://www.linkedin.com/in/roger-rajaratnam-3888021a4/"
+              href="https://www.linkedin.com/in/roger-rajaratnam/"
               target="_blank"
               rel="noopener noreferrer"
               className="link-accent link-hover"

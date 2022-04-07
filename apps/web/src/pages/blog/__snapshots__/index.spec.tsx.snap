@@ -358,7 +358,7 @@ exports[`BlogHomePage should render successfully 1`] = `
            
           <a
             className="link-accent link-hover"
-            href="https://www.linkedin.com/in/roger-rajaratnam-3888021a4/"
+            href="https://www.linkedin.com/in/roger-rajaratnam/"
             rel="noopener noreferrer"
             target="_blank"
           >
