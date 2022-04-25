@@ -17,6 +17,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-sass',
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-remark-images',
     {
       resolve: 'gatsby-plugin-svgr',
       options: {
@@ -24,7 +30,6 @@ module.exports = {
         ref: true,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,15 +37,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
     {
       resolve: require.resolve(`@nrwl/gatsby/plugins/nx-gatsby-ext-plugin`),
       options: {
         path: __dirname,
       },
     },
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -53,11 +55,19 @@ module.exports = {
         icon: `src/images/icon.svg`,
       },
     },
-    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
+        root: __dirname,
         extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1120,
+            },
+          },
+        ],
       },
     },
     {

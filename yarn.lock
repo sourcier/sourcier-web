@@ -10478,6 +10478,11 @@ css-select@~1.2.0:
     domutils "1.5.1"
     nth-check "~1.0.1"
 
+css-selector-parser@^1.0.0:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/css-selector-parser/-/css-selector-parser-1.4.1.tgz#03f9cb8a81c3e5ab2c51684557d5aaf6d2569759"
+  integrity sha512-HYPSb7y/Z7BNDCOrakL4raGO2zltZkbeXyAd6Tg9obzix6QhzxCotdBl6VT0Dv4vZfJGVz3WL/xaEI9Ly3ul0g==
+
 css-selector-tokenizer@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/css-selector-tokenizer/-/css-selector-tokenizer-0.8.0.tgz#88267ef6238e64f2215ea2764b3e2cf498b845dd"
@@ -13281,6 +13286,27 @@ gatsby-codemods@^3.2.0:
     jscodeshift "^0.12.0"
     recast "^0.20.5"
 
+gatsby-core-utils@^3.12.1:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.12.1.tgz#590ec08de7168b086b7d49128732b9ada95b985f"
+  integrity sha512-jBG1MfR6t2MZNIl8LQ3Cwc92F6uFNcEC091IK+qKVy9FNT0+WzcKQ6Olip6u1NSvCatfrg1FqrH0K78a6lmnLQ==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    ci-info "2.0.0"
+    configstore "^5.0.1"
+    fastq "^1.13.0"
+    file-type "^16.5.3"
+    fs-extra "^10.0.0"
+    got "^11.8.3"
+    import-from "^4.0.0"
+    lmdb "^2.2.6"
+    lock "^1.1.0"
+    node-object-hash "^2.3.10"
+    proper-lockfile "^4.1.2"
+    resolve-from "^5.0.0"
+    tmp "^0.2.1"
+    xdg-basedir "^4.0.0"
+
 gatsby-core-utils@^3.2.0, gatsby-core-utils@^3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.7.0.tgz#edc928d948a3672d3166b914225a70369325818e"
@@ -13572,6 +13598,23 @@ gatsby-react-router-scroll@^5.2.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
     prop-types "^15.7.2"
+
+gatsby-remark-images@^6.12.1:
+  version "6.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.12.1.tgz#878c0e8c317f1bbb19e50e0efdf08ed5ef83d4b8"
+  integrity sha512-JxCd+NZqEHhYR25u5kr2mbp1o1ssMjaDl+Wkr4L15Qf1jS5YtkZxXF27V/AORzoVhZyQ1bQzgGgRZ/bqgav7gA==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    chalk "^4.1.2"
+    cheerio "^1.0.0-rc.10"
+    gatsby-core-utils "^3.12.1"
+    is-relative-url "^3.0.0"
+    lodash "^4.17.21"
+    mdast-util-definitions "^4.0.0"
+    potrace "^2.1.8"
+    query-string "^6.14.1"
+    unist-util-select "^3.0.4"
+    unist-util-visit-parents "^3.1.1"
 
 gatsby-source-filesystem@4.2.0:
   version "4.2.0"
@@ -17152,6 +17195,31 @@ listr2@^4.0.1:
     through "^2.3.8"
     wrap-ansi "^7.0.0"
 
+lmdb-darwin-arm64@2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/lmdb-darwin-arm64/-/lmdb-darwin-arm64-2.3.6.tgz#4f8d01a78c33e0ea2450661d902032fb0ecf2491"
+  integrity sha512-E2MnbFtsrr/EOsrBdZg913OgIAeiQDx8IMIOuqnDv3tghpvgSbdC8vx9phFZipqBPjZB7VV31tpyXyM3mxatqg==
+
+lmdb-darwin-x64@2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/lmdb-darwin-x64/-/lmdb-darwin-x64-2.3.6.tgz#ff000229ed72e39f9d5275f01061be3d4573d210"
+  integrity sha512-Sz+3FuA66PXq5iZnGC+0wJcMOpf5dO5m4xgZs1yTM1EvCMjd28KPq59CtDBlLX1Y+5oDOYEVeiLOOLDeZIgTLw==
+
+lmdb-linux-arm64@2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/lmdb-linux-arm64/-/lmdb-linux-arm64-2.3.6.tgz#13d0293744e120164d58860874b02c64a289d0d8"
+  integrity sha512-ZGHCulnZGMWYRs6pyLrRmX+DpBI/IUy3X5c+S69Cd6XD0//+xlyYnDXnhGNFaAE8ch1PWtr7Npd1lkpVeY9Z4A==
+
+lmdb-linux-arm@2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/lmdb-linux-arm/-/lmdb-linux-arm-2.3.6.tgz#f58744511244fb398f06a23f7e685c0dda6262f0"
+  integrity sha512-U6UojWtQH4CbRwStbe5b9PnHg7nPObWLKWhBudmU93lvA1Ncm2FrRqRKJRFDAr4HZ9uSMdKgaOOCWNbaJEcPQA==
+
+lmdb-linux-x64@2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/lmdb-linux-x64/-/lmdb-linux-x64-2.3.6.tgz#87908328ce8643bb4bf952e2a091b09b86e1e95a"
+  integrity sha512-z38fR4ijnxGN6E2bgzx2osAW1KfGjW7cDSjOXmyMFBHCfdB2wdmJU7+Lq2VY6oiZSpszPgHNQVyLkPjVr9Wrvg==
+
 lmdb-store@^1.6.11:
   version "1.6.14"
   resolved "https://registry.yarnpkg.com/lmdb-store/-/lmdb-store-1.6.14.tgz#8aa5f36fb04195f8639a3b01b32f6696867f2bc9"
@@ -17163,6 +17231,11 @@ lmdb-store@^1.6.11:
     ordered-binary "^1.0.0"
     weak-lru-cache "^1.0.0"
 
+lmdb-win32-x64@2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/lmdb-win32-x64/-/lmdb-win32-x64-2.3.6.tgz#e05ead1edb0f5a4a00d841b622564e3b66ca06ff"
+  integrity sha512-Yzsj9xfpo4qBWWfEjJZWm7+riGTjuyUBkYJ/chsIjlcixU+Yws+lhHnJO6w/34beoPnmxZhn+cZvsHCrNJSeQw==
+
 lmdb@^2.1.7:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/lmdb/-/lmdb-2.2.4.tgz#6494d5a1d1db152e0be759edcfa06893e4cbdb53"
@@ -17173,6 +17246,25 @@ lmdb@^2.1.7:
     node-gyp-build "^4.2.3"
     ordered-binary "^1.2.4"
     weak-lru-cache "^1.2.2"
+
+lmdb@^2.2.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/lmdb/-/lmdb-2.3.6.tgz#ab928e1ae3e68dd7980846f5a452b505b40e06a8"
+  integrity sha512-XlzB1rrsEtWWhmLPIKJCU1mDfv59M4j/31LoNIRs9kvwwsAgzuPLbwTBwZGUvReJFBeNp41vfKor6CNwkubaTw==
+  dependencies:
+    msgpackr "^1.5.4"
+    nan "^2.14.2"
+    node-addon-api "^4.3.0"
+    node-gyp-build-optional-packages "^4.3.2"
+    ordered-binary "^1.2.4"
+    weak-lru-cache "^1.2.2"
+  optionalDependencies:
+    lmdb-darwin-arm64 "2.3.6"
+    lmdb-darwin-x64 "2.3.6"
+    lmdb-linux-arm "2.3.6"
+    lmdb-linux-arm64 "2.3.6"
+    lmdb-linux-x64 "2.3.6"
+    lmdb-win32-x64 "2.3.6"
 
 load-bmfont@^1.3.1, load-bmfont@^1.4.0:
   version "1.4.1"
@@ -18412,7 +18504,7 @@ node-addon-api@3.2.1, node-addon-api@^3.2.1:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.2.1.tgz#81325e0a2117789c0128dab65e7e38f07ceba161"
   integrity sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==
 
-node-addon-api@^4.2.0:
+node-addon-api@^4.2.0, node-addon-api@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-4.3.0.tgz#52a1a0b475193e0928e98e0426a0d1254782b77f"
   integrity sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==
@@ -18440,6 +18532,11 @@ node-forge@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-1.2.1.tgz#82794919071ef2eb5c509293325cec8afd0fd53c"
   integrity sha512-Fcvtbb+zBcZXbTTVwqGA5W+MKBj56UjVRevvchv5XrcyXbmNdesfZL37nlcWOfpgHhgmxApw3tQbTr4CqNmX4w==
+
+node-gyp-build-optional-packages@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/node-gyp-build-optional-packages/-/node-gyp-build-optional-packages-4.3.2.tgz#82de9bdf9b1ad042457533afb2f67469dc2264bb"
+  integrity sha512-P5Ep3ISdmwcCkZIaBaQamQtWAG0facC89phWZgi5Z3hBU//J6S48OIvyZWSPPf6yQMklLZiqoosWAZUj7N+esA==
 
 node-gyp-build@^4.2.3, node-gyp-build@^4.3.0:
   version "4.3.0"
@@ -18582,6 +18679,11 @@ normalize-url@^6.0.1, normalize-url@^6.1.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
   integrity sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==
 
+not@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/not/-/not-0.1.0.tgz#c9691c1746c55dcfbe54cbd8bd4ff041bc2b519d"
+  integrity sha1-yWkcF0bFXc++VMvYvU/wQbwrUZ0=
+
 npm-run-path@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
@@ -18623,7 +18725,7 @@ nth-check@^1.0.2, nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-nth-check@^2.0.1:
+nth-check@^2.0.0, nth-check@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-2.0.1.tgz#2efe162f5c3da06a28959fbd3db75dbeea9f0fc2"
   integrity sha512-it1vE95zF6dTT9lBsYbxvqh0Soy4SPowchj0UBGj/V6cTPnXXtQOPUbhZ6CmGzAD/rW22LQK6E96pcdJXk4A4w==
@@ -23836,6 +23938,17 @@ unist-util-remove@^2.0.0:
   dependencies:
     unist-util-is "^4.0.0"
 
+unist-util-select@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-3.0.4.tgz#702c9dc1db1b2bbbfe27f796fce99e43f25edc60"
+  integrity sha512-xf1zCu4okgPqGLdhCDpRnjwBNyv3EqjiXRUbz2SdK1+qnLMB7uXXajfzuBvvbHoQ+JLyp4AEbFCGndmc6S72sw==
+  dependencies:
+    css-selector-parser "^1.0.0"
+    not "^0.1.0"
+    nth-check "^2.0.0"
+    unist-util-is "^4.0.0"
+    zwitch "^1.0.0"
+
 unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-1.1.2.tgz#3f37fcf351279dcbca7480ab5889bb8a832ee1c6"
@@ -23867,7 +23980,7 @@ unist-util-visit-parents@^2.0.0:
   dependencies:
     unist-util-is "^3.0.0"
 
-unist-util-visit-parents@^3.0.0:
+unist-util-visit-parents@^3.0.0, unist-util-visit-parents@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-3.1.1.tgz#65a6ce698f78a6b0f56aa0e88f13801886cdaef6"
   integrity sha512-1KROIZWo6bcMrZEwiH2UrXDyalAa0uqzWCxCJj6lPOvTve2WkfgCytoDTPaMnodXh1WrXOq0haVYHj99ynJlsg==
